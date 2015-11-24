@@ -10,10 +10,18 @@ import UIKit
 
 class MenuCustomizationViewController: UIViewController {
 
+    @IBOutlet weak var closeButton: UIBarButtonItem!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
         self.title = "Dönerbox"
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        if !appDelegate.enteredViaShortCut{
+            self.closeButton.title = ""
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,6 +29,11 @@ class MenuCustomizationViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func closeButtonPressed(sender: AnyObject) {
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        appDelegate.enteredViaShortCut = false
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
 
     /*
     // MARK: - Navigation

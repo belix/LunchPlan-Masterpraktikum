@@ -149,23 +149,23 @@
                                                     <exclude reference="EYH-Ch-xJm"/>
                                                 </mask>
                                                 <mask key="constraints">
+                                                    <exclude reference="8La-pq-sSs"/>
+                                                    <exclude reference="8Nt-Py-ubg"/>
+                                                    <exclude reference="Adx-Nq-MHP"/>
+                                                    <exclude reference="FWF-ah-oer"/>
+                                                    <exclude reference="Tgu-pW-E5k"/>
+                                                    <exclude reference="LDx-h7-pF1"/>
+                                                    <exclude reference="XX1-21-AMW"/>
+                                                    <exclude reference="xeU-4F-ogi"/>
+                                                    <exclude reference="9pY-Yg-xQi"/>
+                                                    <exclude reference="ElY-0r-BiX"/>
+                                                    <exclude reference="a9c-0V-hTA"/>
+                                                    <exclude reference="jyR-kN-2dZ"/>
                                                     <exclude reference="D8M-zV-bo5"/>
                                                     <exclude reference="DVq-cg-pJQ"/>
                                                     <exclude reference="buk-Ua-fau"/>
                                                     <exclude reference="nsa-0v-f4M"/>
                                                     <exclude reference="zkt-HV-a4s"/>
-                                                    <exclude reference="FWF-ah-oer"/>
-                                                    <exclude reference="Tgu-pW-E5k"/>
-                                                    <exclude reference="9pY-Yg-xQi"/>
-                                                    <exclude reference="ElY-0r-BiX"/>
-                                                    <exclude reference="a9c-0V-hTA"/>
-                                                    <exclude reference="jyR-kN-2dZ"/>
-                                                    <exclude reference="LDx-h7-pF1"/>
-                                                    <exclude reference="XX1-21-AMW"/>
-                                                    <exclude reference="xeU-4F-ogi"/>
-                                                    <exclude reference="8La-pq-sSs"/>
-                                                    <exclude reference="8Nt-Py-ubg"/>
-                                                    <exclude reference="Adx-Nq-MHP"/>
                                                 </mask>
                                             </variation>
                                             <variation key="heightClass=regular-widthClass=compact">
@@ -178,23 +178,23 @@
                                                     <include reference="EYH-Ch-xJm"/>
                                                 </mask>
                                                 <mask key="constraints">
+                                                    <include reference="8La-pq-sSs"/>
+                                                    <include reference="8Nt-Py-ubg"/>
+                                                    <include reference="Adx-Nq-MHP"/>
+                                                    <include reference="FWF-ah-oer"/>
+                                                    <include reference="Tgu-pW-E5k"/>
+                                                    <include reference="LDx-h7-pF1"/>
+                                                    <include reference="XX1-21-AMW"/>
+                                                    <include reference="xeU-4F-ogi"/>
+                                                    <exclude reference="9pY-Yg-xQi"/>
+                                                    <exclude reference="ElY-0r-BiX"/>
+                                                    <include reference="a9c-0V-hTA"/>
+                                                    <include reference="jyR-kN-2dZ"/>
                                                     <exclude reference="D8M-zV-bo5"/>
                                                     <exclude reference="DVq-cg-pJQ"/>
                                                     <include reference="buk-Ua-fau"/>
                                                     <include reference="nsa-0v-f4M"/>
                                                     <include reference="zkt-HV-a4s"/>
-                                                    <include reference="FWF-ah-oer"/>
-                                                    <include reference="Tgu-pW-E5k"/>
-                                                    <exclude reference="9pY-Yg-xQi"/>
-                                                    <exclude reference="ElY-0r-BiX"/>
-                                                    <include reference="a9c-0V-hTA"/>
-                                                    <include reference="jyR-kN-2dZ"/>
-                                                    <include reference="LDx-h7-pF1"/>
-                                                    <include reference="XX1-21-AMW"/>
-                                                    <include reference="xeU-4F-ogi"/>
-                                                    <include reference="8La-pq-sSs"/>
-                                                    <include reference="8Nt-Py-ubg"/>
-                                                    <include reference="Adx-Nq-MHP"/>
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
@@ -648,7 +648,17 @@
                             <constraint firstItem="Azp-q8-peX" firstAttribute="height" secondItem="zar-GP-gUf" secondAttribute="height" id="zJA-h0-gMn"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="aVk-LX-0i5"/>
+                    <navigationItem key="navigationItem" id="aVk-LX-0i5">
+                        <barButtonItem key="rightBarButtonItem" title="Close" id="FR3-wY-ayZ">
+                            <color key="tintColor" red="0.20000000000000001" green="0.59999999999999998" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="closeButtonPressed:" destination="3sn-Ne-d0g" id="ysP-Hi-fYX"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="closeButton" destination="FR3-wY-ayZ" id="ww2-3W-PU6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S7R-Cu-QLk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -697,7 +707,7 @@
         <!--Navigation Controller-->
         <scene sceneID="C2B-VA-5W1">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wqm-Xf-GV6" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="MenuCustomizationViewController" automaticallyAdjustsScrollViewInsets="NO" id="wqm-Xf-GV6" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="g9G-c3-rFh">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

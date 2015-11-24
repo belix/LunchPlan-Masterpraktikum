@@ -13,6 +13,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     var enteredViaShortCut = false
+    var navigationController : UINavigationController?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
@@ -30,6 +31,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private func handleShortcut(shortcutItem: UIApplicationShortcutItem) -> Bool {
         print("schlund")
         self.enteredViaShortCut = true
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewControllerWithIdentifier("MenuCustomizationViewController") 
+        self.navigationController?.presentViewController(vc, animated: true, completion: nil)
+        
         return true
     }
     

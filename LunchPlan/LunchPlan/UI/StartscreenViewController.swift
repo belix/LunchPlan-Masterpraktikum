@@ -31,15 +31,14 @@ class StartscreenViewController: UIViewController, UITableViewDelegate, UITableV
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Shop Auswahl"
-        
-
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        appDelegate.navigationController = self.navigationController
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         if appDelegate.enteredViaShortCut{
-            self.navigationController
             self.performSegueWithIdentifier("showMenuCustomizationViaShortcutSegue", sender: nil)
         }
     }
