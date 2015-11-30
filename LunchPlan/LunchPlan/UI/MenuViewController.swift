@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CocoaLumberjack
 
 private let reuseIdentifier = "MenuTableViewCell"
 
@@ -17,8 +18,11 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        DDLogInfo("Menu Selection Screen - Appear")
     }
     
     override func shouldAutorotate() -> Bool {
@@ -48,11 +52,14 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
         cell.menuLabel.text = menuItem.menuName
         cell.menuImageView.image = UIImage(named: menuItem.menuImageString)
         cell.priceLabel.text = menuItem.menuPrice
+
         return cell
     }
     
     //MARK: TableViewDelegate
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let menuItem = shop!.menuItems[indexPath.row]
+        DDLogWarn("Menu selected: \(menuItem.menuName)")
         self.performSegueWithIdentifier("showMenuCustomizationSegue", sender: nil)
     }
 

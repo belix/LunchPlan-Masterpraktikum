@@ -57,9 +57,13 @@ class StartscreenViewController: UIViewController, UITableViewDelegate, UITableV
             
             let okAction = UIAlertAction(title: "OK", style: .Default) { (action:UIAlertAction!) in
                 DDLogInfo("--------- Start Logging ---------")
+                DDLogInfo("Shop Selection Screen - Appear")
             }
             alertController.addAction(okAction)
             self.presentViewController(alertController, animated: true, completion: nil)
+        }
+        else{
+            DDLogInfo("Shop Selection Screen - Appear")
         }
     }
     
@@ -108,17 +112,17 @@ class StartscreenViewController: UIViewController, UITableViewDelegate, UITableV
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         self.selectedShop = shops[indexPath.row]
         self.performSegueWithIdentifier("showMenuSegue", sender: nil)
-        DDLogInfo("Shop selected: \(self.selectedShop!.shopName)")
+        DDLogWarn("Shop selected: \(self.selectedShop!.shopName)")
     }
 
     
     func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
         let more = UITableViewRowAction(style: .Normal, title: "Statistiken") { action, index in
             self.performSegueWithIdentifier("showStatisticsSegue", sender: nil)
-            DDLogInfo("Statistic button pressed")
+            DDLogVerbose("Statistic button pressed")
         }
         more.backgroundColor = UIColor.lightGrayColor()
-        DDLogInfo("Swiped cell to see statistics")
+        DDLogVerbose("Swiped cell to see statistics")
 
         return [more]
     }
@@ -130,7 +134,7 @@ class StartscreenViewController: UIViewController, UITableViewDelegate, UITableV
     
     override func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent?) {
         if motion == .MotionShake {
-            DDLogVerbose("Shaked to Favorites")
+            DDLogError("Shaked to Favorites")
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let vc = storyboard.instantiateViewControllerWithIdentifier("FavoritesNavigationController")
             self.navigationController?.presentViewController(vc, animated: true, completion: nil)

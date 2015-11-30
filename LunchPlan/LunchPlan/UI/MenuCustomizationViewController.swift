@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CocoaLumberjack
 
 class MenuCustomizationViewController: UIViewController {
 
@@ -17,6 +18,7 @@ class MenuCustomizationViewController: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        DDLogInfo("Menu Customization Screen - Appear")
         self.title = "Dönerbox"
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         if !appDelegate.enteredViaShortCut{
@@ -39,6 +41,7 @@ class MenuCustomizationViewController: UIViewController {
     }
 
     @IBAction func orderButtonPressed(sender: AnyObject) {
+        DDLogWarn("Menu ordered")
         let alertController = UIAlertController(title: "Bestellung erfolgreich", message:
             "Du kannst deine Dönerbox um 12:45 Uhr abholen.", preferredStyle: UIAlertControllerStyle.Alert)
         alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default,handler: nil))

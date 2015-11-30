@@ -46,7 +46,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewControllerWithIdentifier("MenuCustomizationViewController") 
         self.navigationController?.presentViewController(vc, animated: true, completion: nil)
-        
+        DDLogWarn("Entered Application via Force Touch")
         return true
     }
     
