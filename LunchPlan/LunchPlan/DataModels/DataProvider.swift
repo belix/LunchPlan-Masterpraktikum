@@ -10,9 +10,9 @@ import UIKit
 
 class DataProvider: NSObject {
     
-    static let dönerBox = MenuItem(menuName: "Dönerbox", menuPrice: "2,99 €", menuImageString: "clock")
-    static let currywurst = MenuItem(menuName: "Currywurst", menuPrice: "1,99 €", menuImageString: "clock")
-    static let pommes = MenuItem(menuName: "Pommes", menuPrice: "0,99 €", menuImageString: "clock")
+    static let dönerBox = MenuItem(menuName: "Dönerbox", menuPrice: "2,99 €", menuImageString: "doenerbox")
+    static let currywurst = MenuItem(menuName: "Currywurst", menuPrice: "1,99 €", menuImageString: "currywurst")
+    static let pommes = MenuItem(menuName: "Pommes", menuPrice: "0,99 €", menuImageString: "pommes")
     
     static let gourmetImbiss = Shop(shopName: "Gourmet Imbiss", distance: "500 m", waitingTime: 12, menuItems:[dönerBox, currywurst,pommes])
     static let onkelLou = Shop(shopName: "Onkel Lou", distance: "450 m", waitingTime: 9, menuItems:[dönerBox, currywurst,pommes])

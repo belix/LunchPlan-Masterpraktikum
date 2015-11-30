@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		051CBA681C0BF9BD00B0BA3B /* CustomLoggingFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051CBA671C0BF9BD00B0BA3B /* CustomLoggingFormatter.swift */; };
 		051CBA6A1C0C044100B0BA3B /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051CBA691C0C044100B0BA3B /* DataProvider.swift */; };
+		051CBA6D1C0C113F00B0BA3B /* StatisticViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051CBA6C1C0C113F00B0BA3B /* StatisticViewController.swift */; };
 		0534DECF1C0BA948003F04C3 /* AdminPanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0534DECE1C0BA948003F04C3 /* AdminPanelViewController.swift */; };
 		058877761C04849100FEE592 /* ShopTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058877751C04849100FEE592 /* ShopTableViewCell.swift */; };
 		058877781C048AE400FEE592 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058877771C048AE400FEE592 /* MenuViewController.swift */; };
@@ -16,7 +17,6 @@
 		0588777D1C048C4D00FEE592 /* Shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0588777C1C048C4D00FEE592 /* Shop.swift */; };
 		0588777F1C048D4A00FEE592 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0588777E1C048D4A00FEE592 /* MenuItem.swift */; };
 		058877811C0490FC00FEE592 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058877801C0490FC00FEE592 /* FavoritesViewController.swift */; };
-		058877831C04912800FEE592 /* FavoritesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058877821C04912800FEE592 /* FavoritesTableViewCell.swift */; };
 		058877891C04A4A200FEE592 /* MenuCustomizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058877881C04A4A200FEE592 /* MenuCustomizationViewController.swift */; };
 		05A8829A1C04AF45005106C0 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A882991C04AF45005106C0 /* CircleView.swift */; };
 		05FCED491C047C8B00482EA2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FCED481C047C8B00482EA2 /* AppDelegate.swift */; };
@@ -49,6 +49,7 @@
 /* Begin PBXFileReference section */
 		051CBA671C0BF9BD00B0BA3B /* CustomLoggingFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomLoggingFormatter.swift; sourceTree = "<group>"; };
 		051CBA691C0C044100B0BA3B /* DataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataProvider.swift; path = DataModels/DataProvider.swift; sourceTree = "<group>"; };
+		051CBA6C1C0C113F00B0BA3B /* StatisticViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StatisticViewController.swift; path = UI/StatisticViewController.swift; sourceTree = "<group>"; };
 		0534DECE1C0BA948003F04C3 /* AdminPanelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AdminPanelViewController.swift; path = UI/AdminPanelViewController.swift; sourceTree = "<group>"; };
 		058877751C04849100FEE592 /* ShopTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShopTableViewCell.swift; path = UI/ShopTableViewCell.swift; sourceTree = "<group>"; };
 		058877771C048AE400FEE592 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuViewController.swift; path = UI/MenuViewController.swift; sourceTree = "<group>"; };
@@ -56,7 +57,6 @@
 		0588777C1C048C4D00FEE592 /* Shop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Shop.swift; path = DataModels/Shop.swift; sourceTree = "<group>"; };
 		0588777E1C048D4A00FEE592 /* MenuItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuItem.swift; path = DataModels/MenuItem.swift; sourceTree = "<group>"; };
 		058877801C0490FC00FEE592 /* FavoritesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FavoritesViewController.swift; path = UI/FavoritesViewController.swift; sourceTree = "<group>"; };
-		058877821C04912800FEE592 /* FavoritesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FavoritesTableViewCell.swift; path = UI/FavoritesTableViewCell.swift; sourceTree = "<group>"; };
 		058877881C04A4A200FEE592 /* MenuCustomizationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuCustomizationViewController.swift; path = UI/MenuCustomizationViewController.swift; sourceTree = "<group>"; };
 		05A882991C04AF45005106C0 /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		05FCED451C047C8B00482EA2 /* LunchPlan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LunchPlan.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -111,6 +111,14 @@
 			name = Logging;
 			sourceTree = "<group>";
 		};
+		051CBA6B1C0C113200B0BA3B /* Statistics */ = {
+			isa = PBXGroup;
+			children = (
+				051CBA6C1C0C113F00B0BA3B /* StatisticViewController.swift */,
+			);
+			name = Statistics;
+			sourceTree = "<group>";
+		};
 		0534DECD1C0BA929003F04C3 /* AdminPanel */ = {
 			isa = PBXGroup;
 			children = (
@@ -132,6 +140,7 @@
 		058877841C04912D00FEE592 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				051CBA6B1C0C113200B0BA3B /* Statistics */,
 				05A882991C04AF45005106C0 /* CircleView.swift */,
 				0534DECD1C0BA929003F04C3 /* AdminPanel */,
 				058877871C04915A00FEE592 /* Favorites */,
@@ -164,7 +173,6 @@
 			isa = PBXGroup;
 			children = (
 				058877801C0490FC00FEE592 /* FavoritesViewController.swift */,
-				058877821C04912800FEE592 /* FavoritesTableViewCell.swift */,
 			);
 			name = Favorites;
 			sourceTree = "<group>";
@@ -432,8 +440,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				058877831C04912800FEE592 /* FavoritesTableViewCell.swift in Sources */,
 				058877761C04849100FEE592 /* ShopTableViewCell.swift in Sources */,
+				051CBA6D1C0C113F00B0BA3B /* StatisticViewController.swift in Sources */,
 				058877781C048AE400FEE592 /* MenuViewController.swift in Sources */,
 				0588777A1C048B4500FEE592 /* MenuTableViewCell.swift in Sources */,
 				05FCED771C047CDC00482EA2 /* StartscreenViewController.swift in Sources */,

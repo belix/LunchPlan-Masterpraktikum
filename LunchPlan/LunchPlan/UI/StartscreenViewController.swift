@@ -11,6 +11,25 @@ import CocoaLumberjack
 
 private let reuseIdentifier = "ShopTableViewCell"
 
+extension UINavigationController {
+    public override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
+        return visibleViewController!.supportedInterfaceOrientations()
+    }
+    public override func shouldAutorotate() -> Bool {
+        return visibleViewController!.shouldAutorotate()
+    }
+}
+
+extension UIAlertController {
+    public override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.Portrait
+    }
+    public override func shouldAutorotate() -> Bool {
+        return false
+    }
+}
+
+
 class StartscreenViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     let shops = DataProvider.shops()
@@ -48,7 +67,6 @@ class StartscreenViewController: UIViewController, UITableViewDelegate, UITableV
     override func viewDidLayoutSubviews() {
         for cell in cells{
             let time = cell.time
-            print (cell.backGroundWidthConstraint.constant)
             cell.time = time
         }
     }
@@ -110,8 +128,6 @@ class StartscreenViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     // MARK: - Navigation
-    
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showMenuSegue"{
             let destinationViewController = segue.destinationViewController as! MenuViewController

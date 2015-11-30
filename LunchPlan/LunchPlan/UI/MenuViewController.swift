@@ -21,6 +21,14 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
         // Do any additional setup after loading the view.
     }
     
+    override func shouldAutorotate() -> Bool {
+        return false
+    }
+    
+    override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.Portrait
+    }
+    
     //MARK: TableViewDataSource
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         
@@ -37,9 +45,9 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let cell = tableView.dequeueReusableCellWithIdentifier(reuseIdentifier, forIndexPath: indexPath) as! MenuTableViewCell
         
         let menuItem = shop!.menuItems[indexPath.row]
-        // Configure the cell...
         cell.menuLabel.text = menuItem.menuName
-    
+        cell.menuImageView.image = UIImage(named: menuItem.menuImageString)
+        cell.priceLabel.text = menuItem.menuPrice
         return cell
     }
     

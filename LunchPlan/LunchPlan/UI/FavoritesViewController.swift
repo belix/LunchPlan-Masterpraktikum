@@ -8,7 +8,7 @@
 
 import UIKit
 
-private let reuseIdentifier = "FavoritesTableViewCell"
+private let reuseIdentifier = "MenuTableViewCell"
 
 class FavoritesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
@@ -17,6 +17,14 @@ class FavoritesViewController: UIViewController, UITableViewDataSource, UITableV
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Favoriten"
+    }
+    
+    override func shouldAutorotate() -> Bool {
+        return false
+    }
+    
+    override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.Portrait
     }
     
     @IBAction func closeButtonPressed(sender: AnyObject) {
@@ -34,17 +42,19 @@ class FavoritesViewController: UIViewController, UITableViewDataSource, UITableV
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(reuseIdentifier, forIndexPath: indexPath) as! FavoritesTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier(reuseIdentifier, forIndexPath: indexPath) as! MenuTableViewCell
         
         let menuItem = favorites[indexPath.row]
-        // Configure the cell...
-        cell.menuItemLabel.text = menuItem.menuName
+        cell.menuLabel.text = menuItem.menuName
+        cell.menuImageView.image = UIImage(named: menuItem.menuImageString)
+        cell.priceLabel.text = menuItem.menuPrice
         
         return cell
     }
     
     //MARK: TableViewDelegate
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        self.performSegueWithIdentifier("showMenuCustomizationSegue", sender: nil)
     }
 
     /*

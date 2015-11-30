@@ -11,9 +11,17 @@ import UIKit
 class AdminPanelViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var notificationTextField: UITextField!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
+    }
+    
+    override func shouldAutorotate() -> Bool {
+        return false
+    }
+    
+    override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.Portrait
     }
     
     //Internal: Notification
