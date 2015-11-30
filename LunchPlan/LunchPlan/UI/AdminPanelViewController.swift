@@ -10,6 +10,15 @@ import UIKit
 import CocoaLumberjack
 import MessageUI
 
+extension Double {
+    func string(fractionDigits:Int) -> String {
+        let formatter = NSNumberFormatter()
+        formatter.minimumFractionDigits = fractionDigits
+        formatter.maximumFractionDigits = fractionDigits
+        return formatter.stringFromNumber(self) ?? "\(self)"
+    }
+}
+
 private let reuseIdentifier = "LoggingTableViewCell"
 class AdminPanelViewController: UIViewController, UITextFieldDelegate,MFMailComposeViewControllerDelegate {
 
@@ -18,9 +27,16 @@ class AdminPanelViewController: UIViewController, UITextFieldDelegate,MFMailComp
     
     var messages = CustomLogger.sharedInstance.messages
     let dateFormatter = NSDateFormatter()
+    var startTime: NSDate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        if self.messages.count != 0{
+            startTime = self.messages[0].timestamp
+        }
+        else{
+            startTime = NSDate()
+        }
         self.dateFormatter.dateFormat = "HH:mm:ss:SSS"
     }
     
@@ -99,7 +115,8 @@ class AdminPanelViewController: UIViewController, UITextFieldDelegate,MFMailComp
     //MARK: Customization
     func textOfMessage(index: Int) -> String{
         let message = self.messages[index]
-        return "\(self.dateFormatter.stringFromDate(message.timestamp)):  \(message.message)"
+        let timestamp = message.timestamp.timeIntervalSinceDate(startTime!) as Double
+        return "\(self.dateFormatter.stringFromDate(message.timestamp)) --- 00:\(timestamp.string(0)):  \(message.message)"
     }
     
     func configureCell(cell: UITableViewCell, indexPath: NSIndexPath){
