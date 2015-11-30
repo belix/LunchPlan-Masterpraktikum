@@ -1,0 +1,653 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		051CBA7B1C0C679100B0BA3B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051CBA7A1C0C679100B0BA3B /* AppDelegate.swift */; };
+		051CBA801C0C679100B0BA3B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 051CBA7E1C0C679100B0BA3B /* Main.storyboard */; };
+		051CBA821C0C679100B0BA3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 051CBA811C0C679100B0BA3B /* Assets.xcassets */; };
+		051CBA851C0C679100B0BA3B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 051CBA831C0C679100B0BA3B /* LaunchScreen.storyboard */; };
+		051CBA901C0C679100B0BA3B /* LunchPlan_BaselineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051CBA8F1C0C679100B0BA3B /* LunchPlan_BaselineTests.swift */; };
+		051CBA9B1C0C679100B0BA3B /* LunchPlan_BaselineUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051CBA9A1C0C679100B0BA3B /* LunchPlan_BaselineUITests.swift */; };
+		051CBAB11C0C682E00B0BA3B /* StartscreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051CBAA91C0C682E00B0BA3B /* StartscreenViewController.swift */; };
+		051CBAB21C0C682E00B0BA3B /* ShopTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051CBAAA1C0C682E00B0BA3B /* ShopTableViewCell.swift */; };
+		051CBAB31C0C682E00B0BA3B /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051CBAAB1C0C682E00B0BA3B /* FavoritesViewController.swift */; };
+		051CBAB41C0C682E00B0BA3B /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051CBAAC1C0C682E00B0BA3B /* MenuViewController.swift */; };
+		051CBAB51C0C682E00B0BA3B /* MenuCustomizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051CBAAD1C0C682E00B0BA3B /* MenuCustomizationViewController.swift */; };
+		051CBAB61C0C682E00B0BA3B /* AdminPanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051CBAAE1C0C682E00B0BA3B /* AdminPanelViewController.swift */; };
+		051CBAB71C0C682E00B0BA3B /* StatisticViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051CBAAF1C0C682E00B0BA3B /* StatisticViewController.swift */; };
+		051CBAB81C0C682E00B0BA3B /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051CBAB01C0C682E00B0BA3B /* MenuTableViewCell.swift */; };
+		051CBABD1C0C683E00B0BA3B /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051CBABA1C0C683E00B0BA3B /* DataProvider.swift */; };
+		051CBABE1C0C683E00B0BA3B /* Shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051CBABB1C0C683E00B0BA3B /* Shop.swift */; };
+		051CBABF1C0C683E00B0BA3B /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051CBABC1C0C683E00B0BA3B /* MenuItem.swift */; };
+		051CBAC21C0C684D00B0BA3B /* CustomLoggingFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051CBAC11C0C684D00B0BA3B /* CustomLoggingFormatter.swift */; };
+		A185E7D1E6B3B8E680FDAD55 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFD14395903FB878649E045C /* Pods.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		051CBA8C1C0C679100B0BA3B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 051CBA6F1C0C679100B0BA3B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 051CBA761C0C679100B0BA3B;
+			remoteInfo = "LunchPlan-Baseline";
+		};
+		051CBA971C0C679100B0BA3B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 051CBA6F1C0C679100B0BA3B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 051CBA761C0C679100B0BA3B;
+			remoteInfo = "LunchPlan-Baseline";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		051CBA771C0C679100B0BA3B /* LunchPlan-Baseline.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LunchPlan-Baseline.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		051CBA7A1C0C679100B0BA3B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		051CBA7F1C0C679100B0BA3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		051CBA811C0C679100B0BA3B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		051CBA841C0C679100B0BA3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		051CBA861C0C679100B0BA3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		051CBA8B1C0C679100B0BA3B /* LunchPlan-BaselineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "LunchPlan-BaselineTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		051CBA8F1C0C679100B0BA3B /* LunchPlan_BaselineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunchPlan_BaselineTests.swift; sourceTree = "<group>"; };
+		051CBA911C0C679100B0BA3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		051CBA961C0C679100B0BA3B /* LunchPlan-BaselineUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "LunchPlan-BaselineUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		051CBA9A1C0C679100B0BA3B /* LunchPlan_BaselineUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunchPlan_BaselineUITests.swift; sourceTree = "<group>"; };
+		051CBA9C1C0C679100B0BA3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		051CBAA91C0C682E00B0BA3B /* StartscreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StartscreenViewController.swift; path = UI/StartscreenViewController.swift; sourceTree = "<group>"; };
+		051CBAAA1C0C682E00B0BA3B /* ShopTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShopTableViewCell.swift; path = UI/ShopTableViewCell.swift; sourceTree = "<group>"; };
+		051CBAAB1C0C682E00B0BA3B /* FavoritesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FavoritesViewController.swift; path = UI/FavoritesViewController.swift; sourceTree = "<group>"; };
+		051CBAAC1C0C682E00B0BA3B /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuViewController.swift; path = UI/MenuViewController.swift; sourceTree = "<group>"; };
+		051CBAAD1C0C682E00B0BA3B /* MenuCustomizationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuCustomizationViewController.swift; path = UI/MenuCustomizationViewController.swift; sourceTree = "<group>"; };
+		051CBAAE1C0C682E00B0BA3B /* AdminPanelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AdminPanelViewController.swift; path = UI/AdminPanelViewController.swift; sourceTree = "<group>"; };
+		051CBAAF1C0C682E00B0BA3B /* StatisticViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StatisticViewController.swift; path = UI/StatisticViewController.swift; sourceTree = "<group>"; };
+		051CBAB01C0C682E00B0BA3B /* MenuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuTableViewCell.swift; path = UI/MenuTableViewCell.swift; sourceTree = "<group>"; };
+		051CBABA1C0C683E00B0BA3B /* DataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataProvider.swift; path = DataModels/DataProvider.swift; sourceTree = "<group>"; };
+		051CBABB1C0C683E00B0BA3B /* Shop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Shop.swift; path = DataModels/Shop.swift; sourceTree = "<group>"; };
+		051CBABC1C0C683E00B0BA3B /* MenuItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuItem.swift; path = DataModels/MenuItem.swift; sourceTree = "<group>"; };
+		051CBAC11C0C684D00B0BA3B /* CustomLoggingFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomLoggingFormatter.swift; sourceTree = "<group>"; };
+		4F51BA3E79E7AD22F66697E8 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		A54DEACB9EDD66AEE2116676 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		FFD14395903FB878649E045C /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		051CBA741C0C679100B0BA3B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A185E7D1E6B3B8E680FDAD55 /* Pods.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		051CBA881C0C679100B0BA3B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		051CBA931C0C679100B0BA3B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		051CBA6E1C0C679100B0BA3B = {
+			isa = PBXGroup;
+			children = (
+				051CBA791C0C679100B0BA3B /* LunchPlan-Baseline */,
+				051CBA8E1C0C679100B0BA3B /* LunchPlan-BaselineTests */,
+				051CBA991C0C679100B0BA3B /* LunchPlan-BaselineUITests */,
+				051CBA781C0C679100B0BA3B /* Products */,
+				3C40C9FBFB5D7B5E01ED4FBB /* Pods */,
+				71263D62E55BE4E1AB54F6BA /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		051CBA781C0C679100B0BA3B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				051CBA771C0C679100B0BA3B /* LunchPlan-Baseline.app */,
+				051CBA8B1C0C679100B0BA3B /* LunchPlan-BaselineTests.xctest */,
+				051CBA961C0C679100B0BA3B /* LunchPlan-BaselineUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		051CBA791C0C679100B0BA3B /* LunchPlan-Baseline */ = {
+			isa = PBXGroup;
+			children = (
+				051CBAC01C0C684300B0BA3B /* Logging */,
+				051CBAB91C0C683200B0BA3B /* DataModel */,
+				051CBAA81C0C682000B0BA3B /* UI */,
+				051CBA7A1C0C679100B0BA3B /* AppDelegate.swift */,
+				051CBA7E1C0C679100B0BA3B /* Main.storyboard */,
+				051CBA811C0C679100B0BA3B /* Assets.xcassets */,
+				051CBA831C0C679100B0BA3B /* LaunchScreen.storyboard */,
+				051CBA861C0C679100B0BA3B /* Info.plist */,
+			);
+			path = "LunchPlan-Baseline";
+			sourceTree = "<group>";
+		};
+		051CBA8E1C0C679100B0BA3B /* LunchPlan-BaselineTests */ = {
+			isa = PBXGroup;
+			children = (
+				051CBA8F1C0C679100B0BA3B /* LunchPlan_BaselineTests.swift */,
+				051CBA911C0C679100B0BA3B /* Info.plist */,
+			);
+			path = "LunchPlan-BaselineTests";
+			sourceTree = "<group>";
+		};
+		051CBA991C0C679100B0BA3B /* LunchPlan-BaselineUITests */ = {
+			isa = PBXGroup;
+			children = (
+				051CBA9A1C0C679100B0BA3B /* LunchPlan_BaselineUITests.swift */,
+				051CBA9C1C0C679100B0BA3B /* Info.plist */,
+			);
+			path = "LunchPlan-BaselineUITests";
+			sourceTree = "<group>";
+		};
+		051CBAA81C0C682000B0BA3B /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				051CBAA91C0C682E00B0BA3B /* StartscreenViewController.swift */,
+				051CBAAA1C0C682E00B0BA3B /* ShopTableViewCell.swift */,
+				051CBAAB1C0C682E00B0BA3B /* FavoritesViewController.swift */,
+				051CBAAC1C0C682E00B0BA3B /* MenuViewController.swift */,
+				051CBAAD1C0C682E00B0BA3B /* MenuCustomizationViewController.swift */,
+				051CBAAE1C0C682E00B0BA3B /* AdminPanelViewController.swift */,
+				051CBAAF1C0C682E00B0BA3B /* StatisticViewController.swift */,
+				051CBAB01C0C682E00B0BA3B /* MenuTableViewCell.swift */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		051CBAB91C0C683200B0BA3B /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				051CBABA1C0C683E00B0BA3B /* DataProvider.swift */,
+				051CBABB1C0C683E00B0BA3B /* Shop.swift */,
+				051CBABC1C0C683E00B0BA3B /* MenuItem.swift */,
+			);
+			name = DataModel;
+			sourceTree = "<group>";
+		};
+		051CBAC01C0C684300B0BA3B /* Logging */ = {
+			isa = PBXGroup;
+			children = (
+				051CBAC11C0C684D00B0BA3B /* CustomLoggingFormatter.swift */,
+			);
+			name = Logging;
+			sourceTree = "<group>";
+		};
+		3C40C9FBFB5D7B5E01ED4FBB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A54DEACB9EDD66AEE2116676 /* Pods.debug.xcconfig */,
+				4F51BA3E79E7AD22F66697E8 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		71263D62E55BE4E1AB54F6BA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FFD14395903FB878649E045C /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		051CBA761C0C679100B0BA3B /* LunchPlan-Baseline */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 051CBA9F1C0C679100B0BA3B /* Build configuration list for PBXNativeTarget "LunchPlan-Baseline" */;
+			buildPhases = (
+				9592F9B26D7EF454D1DE0FD3 /* Check Pods Manifest.lock */,
+				051CBA731C0C679100B0BA3B /* Sources */,
+				051CBA741C0C679100B0BA3B /* Frameworks */,
+				051CBA751C0C679100B0BA3B /* Resources */,
+				511EC8238E1D5F8B65BFFD79 /* Embed Pods Frameworks */,
+				21F60CBC4EF6FFAAD5BB4512 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "LunchPlan-Baseline";
+			productName = "LunchPlan-Baseline";
+			productReference = 051CBA771C0C679100B0BA3B /* LunchPlan-Baseline.app */;
+			productType = "com.apple.product-type.application";
+		};
+		051CBA8A1C0C679100B0BA3B /* LunchPlan-BaselineTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 051CBAA21C0C679100B0BA3B /* Build configuration list for PBXNativeTarget "LunchPlan-BaselineTests" */;
+			buildPhases = (
+				051CBA871C0C679100B0BA3B /* Sources */,
+				051CBA881C0C679100B0BA3B /* Frameworks */,
+				051CBA891C0C679100B0BA3B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				051CBA8D1C0C679100B0BA3B /* PBXTargetDependency */,
+			);
+			name = "LunchPlan-BaselineTests";
+			productName = "LunchPlan-BaselineTests";
+			productReference = 051CBA8B1C0C679100B0BA3B /* LunchPlan-BaselineTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		051CBA951C0C679100B0BA3B /* LunchPlan-BaselineUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 051CBAA51C0C679100B0BA3B /* Build configuration list for PBXNativeTarget "LunchPlan-BaselineUITests" */;
+			buildPhases = (
+				051CBA921C0C679100B0BA3B /* Sources */,
+				051CBA931C0C679100B0BA3B /* Frameworks */,
+				051CBA941C0C679100B0BA3B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				051CBA981C0C679100B0BA3B /* PBXTargetDependency */,
+			);
+			name = "LunchPlan-BaselineUITests";
+			productName = "LunchPlan-BaselineUITests";
+			productReference = 051CBA961C0C679100B0BA3B /* LunchPlan-BaselineUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		051CBA6F1C0C679100B0BA3B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = LunchPlan;
+				TargetAttributes = {
+					051CBA761C0C679100B0BA3B = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+					051CBA8A1C0C679100B0BA3B = {
+						CreatedOnToolsVersion = 7.1.1;
+						TestTargetID = 051CBA761C0C679100B0BA3B;
+					};
+					051CBA951C0C679100B0BA3B = {
+						CreatedOnToolsVersion = 7.1.1;
+						TestTargetID = 051CBA761C0C679100B0BA3B;
+					};
+				};
+			};
+			buildConfigurationList = 051CBA721C0C679100B0BA3B /* Build configuration list for PBXProject "LunchPlan-Baseline" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 051CBA6E1C0C679100B0BA3B;
+			productRefGroup = 051CBA781C0C679100B0BA3B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				051CBA761C0C679100B0BA3B /* LunchPlan-Baseline */,
+				051CBA8A1C0C679100B0BA3B /* LunchPlan-BaselineTests */,
+				051CBA951C0C679100B0BA3B /* LunchPlan-BaselineUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		051CBA751C0C679100B0BA3B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				051CBA851C0C679100B0BA3B /* LaunchScreen.storyboard in Resources */,
+				051CBA821C0C679100B0BA3B /* Assets.xcassets in Resources */,
+				051CBA801C0C679100B0BA3B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		051CBA891C0C679100B0BA3B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		051CBA941C0C679100B0BA3B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		21F60CBC4EF6FFAAD5BB4512 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		511EC8238E1D5F8B65BFFD79 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9592F9B26D7EF454D1DE0FD3 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		051CBA731C0C679100B0BA3B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				051CBAB21C0C682E00B0BA3B /* ShopTableViewCell.swift in Sources */,
+				051CBAB51C0C682E00B0BA3B /* MenuCustomizationViewController.swift in Sources */,
+				051CBABD1C0C683E00B0BA3B /* DataProvider.swift in Sources */,
+				051CBABE1C0C683E00B0BA3B /* Shop.swift in Sources */,
+				051CBAB41C0C682E00B0BA3B /* MenuViewController.swift in Sources */,
+				051CBA7B1C0C679100B0BA3B /* AppDelegate.swift in Sources */,
+				051CBAB31C0C682E00B0BA3B /* FavoritesViewController.swift in Sources */,
+				051CBAB81C0C682E00B0BA3B /* MenuTableViewCell.swift in Sources */,
+				051CBAB11C0C682E00B0BA3B /* StartscreenViewController.swift in Sources */,
+				051CBABF1C0C683E00B0BA3B /* MenuItem.swift in Sources */,
+				051CBAC21C0C684D00B0BA3B /* CustomLoggingFormatter.swift in Sources */,
+				051CBAB61C0C682E00B0BA3B /* AdminPanelViewController.swift in Sources */,
+				051CBAB71C0C682E00B0BA3B /* StatisticViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		051CBA871C0C679100B0BA3B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				051CBA901C0C679100B0BA3B /* LunchPlan_BaselineTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		051CBA921C0C679100B0BA3B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				051CBA9B1C0C679100B0BA3B /* LunchPlan_BaselineUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		051CBA8D1C0C679100B0BA3B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 051CBA761C0C679100B0BA3B /* LunchPlan-Baseline */;
+			targetProxy = 051CBA8C1C0C679100B0BA3B /* PBXContainerItemProxy */;
+		};
+		051CBA981C0C679100B0BA3B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 051CBA761C0C679100B0BA3B /* LunchPlan-Baseline */;
+			targetProxy = 051CBA971C0C679100B0BA3B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		051CBA7E1C0C679100B0BA3B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				051CBA7F1C0C679100B0BA3B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		051CBA831C0C679100B0BA3B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				051CBA841C0C679100B0BA3B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		051CBA9D1C0C679100B0BA3B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		051CBA9E1C0C679100B0BA3B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		051CBAA01C0C679100B0BA3B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A54DEACB9EDD66AEE2116676 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "LunchPlan-Baseline/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.LunchPlan.LunchPlan-Baseline";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		051CBAA11C0C679100B0BA3B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4F51BA3E79E7AD22F66697E8 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "LunchPlan-Baseline/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.LunchPlan.LunchPlan-Baseline";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		051CBAA31C0C679100B0BA3B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "LunchPlan-BaselineTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.LunchPlan.LunchPlan-BaselineTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LunchPlan-Baseline.app/LunchPlan-Baseline";
+			};
+			name = Debug;
+		};
+		051CBAA41C0C679100B0BA3B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "LunchPlan-BaselineTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.LunchPlan.LunchPlan-BaselineTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LunchPlan-Baseline.app/LunchPlan-Baseline";
+			};
+			name = Release;
+		};
+		051CBAA61C0C679100B0BA3B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "LunchPlan-BaselineUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.LunchPlan.LunchPlan-BaselineUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "LunchPlan-Baseline";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		051CBAA71C0C679100B0BA3B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "LunchPlan-BaselineUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.LunchPlan.LunchPlan-BaselineUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "LunchPlan-Baseline";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		051CBA721C0C679100B0BA3B /* Build configuration list for PBXProject "LunchPlan-Baseline" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				051CBA9D1C0C679100B0BA3B /* Debug */,
+				051CBA9E1C0C679100B0BA3B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		051CBA9F1C0C679100B0BA3B /* Build configuration list for PBXNativeTarget "LunchPlan-Baseline" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				051CBAA01C0C679100B0BA3B /* Debug */,
+				051CBAA11C0C679100B0BA3B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		051CBAA21C0C679100B0BA3B /* Build configuration list for PBXNativeTarget "LunchPlan-BaselineTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				051CBAA31C0C679100B0BA3B /* Debug */,
+				051CBAA41C0C679100B0BA3B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		051CBAA51C0C679100B0BA3B /* Build configuration list for PBXNativeTarget "LunchPlan-BaselineUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				051CBAA61C0C679100B0BA3B /* Debug */,
+				051CBAA71C0C679100B0BA3B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 051CBA6F1C0C679100B0BA3B /* Project object */;
+}
