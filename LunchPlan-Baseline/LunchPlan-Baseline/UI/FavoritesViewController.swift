@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CocoaLumberjack
 
 private let reuseIdentifier = "MenuTableViewCell"
 
@@ -19,12 +20,9 @@ class FavoritesViewController: UIViewController, UITableViewDataSource, UITableV
         self.title = "Favoriten"
     }
     
-    override func shouldAutorotate() -> Bool {
-        return false
-    }
-    
-    override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
-        return UIInterfaceOrientationMask.Portrait
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        DDLogInfo("Favorites Screen - Appear")
     }
     
     @IBAction func closeButtonPressed(sender: AnyObject) {
@@ -54,6 +52,8 @@ class FavoritesViewController: UIViewController, UITableViewDataSource, UITableV
     
     //MARK: TableViewDelegate
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let menuItem = favorites[indexPath.row]
+        DDLogWarn("Menu selected: \(menuItem.menuName)")
         self.performSegueWithIdentifier("showMenuCustomizationSegue", sender: nil)
     }
 

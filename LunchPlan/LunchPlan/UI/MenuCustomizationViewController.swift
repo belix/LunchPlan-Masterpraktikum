@@ -34,6 +34,18 @@ class MenuCustomizationViewController: UIViewController {
         return UIInterfaceOrientationMask.Portrait
     }
     
+    @IBAction func switch1Pressed(sender: AnyObject) {
+        DDLogWarn("Specific Value(1) switched")
+    }
+    
+    @IBAction func switch2Pressed(sender: AnyObject) {
+        DDLogWarn("Specific Value(2) switched")
+    }
+    
+    @IBAction func valueSelected(sender: AnyObject) {
+        DDLogWarn("Specific Value(3) selected")
+    }
+    
     @IBAction func closeButtonPressed(sender: AnyObject) {
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         appDelegate.enteredViaShortCut = false
@@ -47,14 +59,18 @@ class MenuCustomizationViewController: UIViewController {
         alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default,handler: nil))
         self.presentViewController(alertController, animated: true, completion: nil)
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    //MARK: Shaking
+    override func canBecomeFirstResponder() -> Bool {
+        return true
     }
-    */
-
+    
+    override func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent?) {
+        if motion == .MotionShake {
+            DDLogError("Shaked to Favorites")
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateViewControllerWithIdentifier("FavoritesNavigationController")
+            self.navigationController?.presentViewController(vc, animated: true, completion: nil)
+        }
+    }
 }

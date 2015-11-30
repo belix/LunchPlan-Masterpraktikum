@@ -13,7 +13,7 @@ import CocoaLumberjack
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var newTask: Bool = false
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
@@ -21,9 +21,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().barTintColor = UIColor.whiteColor()
         UINavigationBar.appearance().tintColor = UIColor(netHex:0x3399CC)
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName:UIColor.blackColor()]
+        UITabBar.appearance().barTintColor = UIColor.darkGrayColor()
+        UITabBar.appearance().tintColor = UIColor.whiteColor()
+
         
         DDTTYLogger.sharedInstance().logFormatter = CustomLoggingFormatter()
         DDLog.addLogger(DDTTYLogger.sharedInstance())
+        DDLog.addLogger(CustomLogger.sharedInstance)
         
         return true
     }

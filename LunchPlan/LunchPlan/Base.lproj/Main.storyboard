@@ -1292,6 +1292,9 @@
                                             <segment title="Pommes"/>
                                             <segment title="Salat"/>
                                         </segments>
+                                        <connections>
+                                            <action selector="switch1Pressed:" destination="3sn-Ne-d0g" eventType="valueChanged" id="YsS-hL-QoC"/>
+                                        </connections>
                                     </segmentedControl>
                                 </subviews>
                                 <animations/>
@@ -1314,6 +1317,9 @@
                                             <segment title="Kräuter-Sauce"/>
                                             <segment title="Knoblauch-Sauce"/>
                                         </segments>
+                                        <connections>
+                                            <action selector="switch2Pressed:" destination="3sn-Ne-d0g" eventType="valueChanged" id="syj-zR-pra"/>
+                                        </connections>
                                     </segmentedControl>
                                 </subviews>
                                 <animations/>
@@ -1340,6 +1346,9 @@
                                         <rect key="frame" x="229" y="3" width="51" height="31"/>
                                         <animations/>
                                         <color key="onTintColor" red="0.20000000000000001" green="0.59999999999999998" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="valueSelected:" destination="3sn-Ne-d0g" eventType="valueChanged" id="kIK-PM-m8d"/>
+                                        </connections>
                                     </switch>
                                 </subviews>
                                 <animations/>

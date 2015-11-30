@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		051C0EA81C0C999400503F16 /* CustomLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051C0EA71C0C999400503F16 /* CustomLogger.swift */; };
+		051C0EAA1C0C99A900503F16 /* AdminPanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051C0EA91C0C99A900503F16 /* AdminPanelViewController.swift */; };
 		051CBA7B1C0C679100B0BA3B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051CBA7A1C0C679100B0BA3B /* AppDelegate.swift */; };
 		051CBA801C0C679100B0BA3B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 051CBA7E1C0C679100B0BA3B /* Main.storyboard */; };
 		051CBA821C0C679100B0BA3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 051CBA811C0C679100B0BA3B /* Assets.xcassets */; };
@@ -18,7 +20,6 @@
 		051CBAB31C0C682E00B0BA3B /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051CBAAB1C0C682E00B0BA3B /* FavoritesViewController.swift */; };
 		051CBAB41C0C682E00B0BA3B /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051CBAAC1C0C682E00B0BA3B /* MenuViewController.swift */; };
 		051CBAB51C0C682E00B0BA3B /* MenuCustomizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051CBAAD1C0C682E00B0BA3B /* MenuCustomizationViewController.swift */; };
-		051CBAB61C0C682E00B0BA3B /* AdminPanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051CBAAE1C0C682E00B0BA3B /* AdminPanelViewController.swift */; };
 		051CBAB71C0C682E00B0BA3B /* StatisticViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051CBAAF1C0C682E00B0BA3B /* StatisticViewController.swift */; };
 		051CBAB81C0C682E00B0BA3B /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051CBAB01C0C682E00B0BA3B /* MenuTableViewCell.swift */; };
 		051CBABD1C0C683E00B0BA3B /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051CBABA1C0C683E00B0BA3B /* DataProvider.swift */; };
@@ -47,6 +48,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		051C0EA71C0C999400503F16 /* CustomLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomLogger.swift; sourceTree = "<group>"; };
+		051C0EA91C0C99A900503F16 /* AdminPanelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdminPanelViewController.swift; sourceTree = "<group>"; };
 		051CBA771C0C679100B0BA3B /* LunchPlan-Baseline.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LunchPlan-Baseline.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		051CBA7A1C0C679100B0BA3B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		051CBA7F1C0C679100B0BA3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -64,7 +67,6 @@
 		051CBAAB1C0C682E00B0BA3B /* FavoritesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FavoritesViewController.swift; path = UI/FavoritesViewController.swift; sourceTree = "<group>"; };
 		051CBAAC1C0C682E00B0BA3B /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuViewController.swift; path = UI/MenuViewController.swift; sourceTree = "<group>"; };
 		051CBAAD1C0C682E00B0BA3B /* MenuCustomizationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuCustomizationViewController.swift; path = UI/MenuCustomizationViewController.swift; sourceTree = "<group>"; };
-		051CBAAE1C0C682E00B0BA3B /* AdminPanelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AdminPanelViewController.swift; path = UI/AdminPanelViewController.swift; sourceTree = "<group>"; };
 		051CBAAF1C0C682E00B0BA3B /* StatisticViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StatisticViewController.swift; path = UI/StatisticViewController.swift; sourceTree = "<group>"; };
 		051CBAB01C0C682E00B0BA3B /* MenuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuTableViewCell.swift; path = UI/MenuTableViewCell.swift; sourceTree = "<group>"; };
 		051CBABA1C0C683E00B0BA3B /* DataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataProvider.swift; path = DataModels/DataProvider.swift; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				051CBAC11C0C684D00B0BA3B /* CustomLoggingFormatter.swift */,
+				051C0EA71C0C999400503F16 /* CustomLogger.swift */,
 			);
 			name = Logging;
 			sourceTree = "<group>";
@@ -201,7 +204,7 @@
 		051CBAC61C0C708D00B0BA3B /* AdminPanel */ = {
 			isa = PBXGroup;
 			children = (
-				051CBAAE1C0C682E00B0BA3B /* AdminPanelViewController.swift */,
+				051C0EA91C0C99A900503F16 /* AdminPanelViewController.swift */,
 			);
 			name = AdminPanel;
 			sourceTree = "<group>";
@@ -448,11 +451,12 @@
 				051CBAB31C0C682E00B0BA3B /* FavoritesViewController.swift in Sources */,
 				051CBAB81C0C682E00B0BA3B /* MenuTableViewCell.swift in Sources */,
 				051CBAC41C0C6F9900B0BA3B /* StatisticsOutlineViewController.swift in Sources */,
+				051C0EAA1C0C99A900503F16 /* AdminPanelViewController.swift in Sources */,
 				051CBAB11C0C682E00B0BA3B /* StartscreenViewController.swift in Sources */,
 				051CBABF1C0C683E00B0BA3B /* MenuItem.swift in Sources */,
 				051CBAC21C0C684D00B0BA3B /* CustomLoggingFormatter.swift in Sources */,
-				051CBAB61C0C682E00B0BA3B /* AdminPanelViewController.swift in Sources */,
 				051CBAB71C0C682E00B0BA3B /* StatisticViewController.swift in Sources */,
+				051C0EA81C0C999400503F16 /* CustomLogger.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

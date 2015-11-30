@@ -11,7 +11,7 @@ import CocoaLumberjack
 
 private let reuseIdentifier = "ShopTableViewCell"
 
-class StartscreenViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class StartscreenViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITabBarControllerDelegate {
     
     let shops = DataProvider.shops()
     var selectedShop : Shop?
@@ -22,6 +22,30 @@ class StartscreenViewController: UIViewController, UITableViewDelegate, UITableV
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Shop Auswahl"
+        self.tabBarController?.delegate = self
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        if appDelegate.newTask{
+            appDelegate.newTask = false
+            let alertController = UIAlertController(title: "Neue Aufgabe", message: "Lasse dir die Aufgabe erklären und drücke OK falls du bereit bist", preferredStyle: UIAlertControllerStyle.Alert)
+            
+            let okAction = UIAlertAction(title: "OK", style: .Default) { (action:UIAlertAction!) in
+                DDLogInfo("--------- Start Logging ---------")
+                DDLogInfo("Shop Selection Screen - Appear")
+            }
+            alertController.addAction(okAction)
+            self.presentViewController(alertController, animated: true, completion: nil)
+        }
+        else{
+            DDLogInfo("Shop Selection Screen - Appear")
+        }
+    }
+    
+    func tabBarController(tabBarController: UITabBarController, didSelectViewController viewController: UIViewController) {
+        DDLogWarn("Tab selected: Shop Selection")
     }
     
     //MARK: TableViewDataSource
@@ -49,19 +73,7 @@ class StartscreenViewController: UIViewController, UITableViewDelegate, UITableV
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         self.selectedShop = shops[indexPath.row]
         self.performSegueWithIdentifier("showMenuSegue", sender: nil)
-        DDLogInfo("Shop selected: \(self.selectedShop!.shopName)")
-    }
-
-    
-    func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
-        let more = UITableViewRowAction(style: .Normal, title: "Statistiken") { action, index in
-            self.performSegueWithIdentifier("showStatisticsSegue", sender: nil)
-            DDLogInfo("Statistic button pressed")
-        }
-        more.backgroundColor = UIColor.lightGrayColor()
-        DDLogInfo("Swiped cell to see statistics")
-
-        return [more]
+        DDLogWarn("Shop selected: \(self.selectedShop!.shopName)")
     }
     
     

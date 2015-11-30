@@ -11,7 +11,7 @@ import CocoaLumberjack
 
 private let reuseIdentifier = "ShopStatisticTableViewCell"
 
-class StatisticsOutlineViewController: UIViewController {
+class StatisticsOutlineViewController: UIViewController, UITabBarControllerDelegate {
     
     let shops = DataProvider.shops()
     var selectedShop : Shop?
@@ -21,7 +21,18 @@ class StatisticsOutlineViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Statistik Überlick"
+        self.tabBarController?.delegate = self
     }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        DDLogInfo("Statistics Outline Screen - Appear")
+    }
+    
+    func tabBarController(tabBarController: UITabBarController, didSelectViewController viewController: UIViewController) {
+        DDLogWarn("Tab selected: Statistic Outlin")
+    }
+    
     
     //MARK: TableViewDataSource
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -49,6 +60,6 @@ class StatisticsOutlineViewController: UIViewController {
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         self.selectedShop = shops[indexPath.row]
         self.performSegueWithIdentifier("showStatisticSegue", sender: nil)
-        DDLogInfo("Shop selected: \(self.selectedShop!.shopName)")
+        DDLogInfo("Shop-Statistics selected: \(self.selectedShop!.shopName)")
     }
 }

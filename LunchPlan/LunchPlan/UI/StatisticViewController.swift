@@ -28,14 +28,18 @@ class StatisticViewController: UIViewController {
         return UIInterfaceOrientationMask.Portrait
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    //MARK: Shaking
+    override func canBecomeFirstResponder() -> Bool {
+        return true
     }
-    */
-
+    
+    override func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent?) {
+        if motion == .MotionShake {
+            DDLogError("Shaked to Favorites")
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateViewControllerWithIdentifier("FavoritesNavigationController")
+            self.navigationController?.presentViewController(vc, animated: true, completion: nil)
+        }
+    }
+    
 }

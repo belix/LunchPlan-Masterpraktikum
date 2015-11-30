@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CocoaLumberjack
 
 class MenuCustomizationViewController: UIViewController {
 
@@ -18,6 +19,7 @@ class MenuCustomizationViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         self.title = "Dönerbox"
+        DDLogInfo("Menu Customization Screen - Appear")
     }
 
     override func shouldAutorotate() -> Bool {
@@ -28,20 +30,24 @@ class MenuCustomizationViewController: UIViewController {
         return UIInterfaceOrientationMask.Portrait
     }
     
+    @IBAction func switch1Pressed(sender: AnyObject) {
+        DDLogWarn("Specific Value(1) switched")
+    }
+    
+    @IBAction func switch2Pressed(sender: AnyObject) {
+        DDLogWarn("Specific Value(2) switched")
+    }
+    
+    @IBAction func valueSelected(sender: AnyObject) {
+        DDLogWarn("Specific Value(3) selected")
+    }
+    
+    
     @IBAction func orderButtonPressed(sender: AnyObject) {
+        DDLogWarn("Menu ordered")
         let alertController = UIAlertController(title: "Bestellung erfolgreich", message:
             "Du kannst deine Dönerbox um 12:45 Uhr abholen.", preferredStyle: UIAlertControllerStyle.Alert)
         alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default,handler: nil))
         self.presentViewController(alertController, animated: true, completion: nil)
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
