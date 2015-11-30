@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         DDTTYLogger.sharedInstance().logFormatter = CustomLoggingFormatter()
         DDLog.addLogger(DDTTYLogger.sharedInstance())
-        
+                
         return true
     }
     

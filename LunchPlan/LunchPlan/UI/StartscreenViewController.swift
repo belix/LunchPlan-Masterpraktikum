@@ -13,20 +13,10 @@ private let reuseIdentifier = "ShopTableViewCell"
 
 class StartscreenViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    let shops =    [Shop(shopName: "Gourmet Imbiss", distance: "500 m", waitingTime: 12, menuItems:[MenuItem(menuName: "Dönerbox", menuPrice: "2,99 €", menuImageString: "clock"),
-                                                                                                    MenuItem(menuName: "Currywurst", menuPrice: "1,99 €", menuImageString: "clock"),
-                                                                                                    MenuItem(menuName: "Pommes", menuPrice: "0,99 €", menuImageString: "clock")]),
-        Shop(shopName: "Onkel Lou", distance: "450 m", waitingTime: 9, menuItems:                  [MenuItem(menuName: "Dönerbox", menuPrice: "2,99 €", menuImageString: "clock"),
-                                                                                                    MenuItem(menuName: "Dönerbox", menuPrice: "2,99 €", menuImageString: "clock"),
-                                                                                                    MenuItem(menuName: "Dönerbox", menuPrice: "2,99 €", menuImageString: "clock")]),
-        Shop(shopName: "Bäckerei", distance: "300 m", waitingTime: 7, menuItems:                   [MenuItem(menuName: "Dönerbox", menuPrice: "2,99 €", menuImageString: "clock"),
-                                                                                                    MenuItem(menuName: "Dönerbox", menuPrice: "2,99 €", menuImageString: "clock"),
-                                                                                                    MenuItem(menuName: "Dönerbox", menuPrice: "2,99 €", menuImageString: "clock")]),
-        Shop(shopName: "Mensa", distance: "1340 m", waitingTime: 2, menuItems:                     [MenuItem(menuName: "Dönerbox", menuPrice: "2,99 €", menuImageString: "clock"),
-                                                                                                    MenuItem(menuName: "Dönerbox", menuPrice: "2,99 €", menuImageString: "clock"),
-                                                                                                    MenuItem(menuName: "Dönerbox", menuPrice: "2,99 €", menuImageString: "clock")]),]
-
+    let shops = DataProvider.shops()
     var selectedShop : Shop?
+    var cells = [ShopTableViewCell]()
+    
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -45,7 +35,22 @@ class StartscreenViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     override func didRotateFromInterfaceOrientation(fromInterfaceOrientation: UIInterfaceOrientation) {
-        self.tableView.reloadData()
+        if fromInterfaceOrientation == .LandscapeLeft || fromInterfaceOrientation == .LandscapeRight{
+            DDLogInfo("Rotate from Heatmap to ListView")
+            self.title = "Shop Auswahl"
+        }
+        else{
+            DDLogInfo("Rotate from ListView to Heatmap")
+            self.title = "Heat Map"
+        }
+    }
+
+    override func viewDidLayoutSubviews() {
+        for cell in cells{
+            let time = cell.time
+            print (cell.backGroundWidthConstraint.constant)
+            cell.time = time
+        }
     }
     
     //MARK: TableViewDataSource
@@ -59,17 +64,15 @@ class StartscreenViewController: UIViewController, UITableViewDelegate, UITableV
         return shops.count
     }
     
-    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(reuseIdentifier, forIndexPath: indexPath) as! ShopTableViewCell
         
         // Configure the cell...
         let shop = shops[indexPath.row]
-        
         cell.shopNameLabel.text = shop.shopName
         cell.time = shop.waitingTime
         cell.distanceLabel.text = shop.distance
-        
+        cells.append(cell)
         return cell
     }
     
@@ -77,16 +80,18 @@ class StartscreenViewController: UIViewController, UITableViewDelegate, UITableV
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         self.selectedShop = shops[indexPath.row]
         self.performSegueWithIdentifier("showMenuSegue", sender: nil)
-        DDLogDebug("Shop selected")
+        DDLogInfo("Shop selected: \(self.selectedShop!.shopName)")
     }
 
     
     func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
         let more = UITableViewRowAction(style: .Normal, title: "Statistiken") { action, index in
             self.performSegueWithIdentifier("showStatisticsSegue", sender: nil)
+            DDLogInfo("Statistic button pressed")
         }
         more.backgroundColor = UIColor.lightGrayColor()
-        
+        DDLogInfo("Swiped cell to see statistics")
+
         return [more]
     }
     
@@ -97,7 +102,7 @@ class StartscreenViewController: UIViewController, UITableViewDelegate, UITableV
     
     override func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent?) {
         if motion == .MotionShake {
-            print("shake")
+            DDLogInfo("Shaked to Favorites")
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let vc = storyboard.instantiateViewControllerWithIdentifier("FavoritesNavigationController")
             self.navigationController?.presentViewController(vc, animated: true, completion: nil)

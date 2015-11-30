@@ -12,7 +12,7 @@ private let reuseIdentifier = "FavoritesTableViewCell"
 
 class FavoritesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
-    let favorites = [MenuItem(menuName: "Currywurst", menuPrice: "1,99 €", menuImageString: "clock"),MenuItem(menuName: "Dönerbox", menuPrice: "2,99 €", menuImageString: "clock"),MenuItem(menuName: "Pommes", menuPrice: "0,99 €", menuImageString: "clock")]
+    let favorites = DataProvider.favoriteMenus()
     
     override func viewDidLoad() {
         super.viewDidLoad()

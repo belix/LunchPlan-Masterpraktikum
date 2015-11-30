@@ -31,12 +31,13 @@ class ShopTableViewCell: UITableViewCell {
     @IBOutlet weak var backGroundWidthConstraint: NSLayoutConstraint!
     @IBOutlet weak var backGroundView: UIView!
     
+    var _time : Int = 0
     var time :Int {
         get {
-            return self.time
+            return _time
         }
         set {
-          //  self.time = newValue
+            _time = newValue
             if newValue > 10{
                 self.backGroundWidthConstraint.constant = 280
                 self.backGroundView?.backgroundColor = UIColor(netHex: 0xc0392b)
@@ -58,7 +59,10 @@ class ShopTableViewCell: UITableViewCell {
                 self.backGroundView?.backgroundColor = UIColor(netHex: 0x2ecc71)
             }
             self.timeLabel.text = "\(newValue) m"
-            self.backGroundView.layoutIfNeeded()
+            
+            UIView.animateWithDuration(Double(0.5), animations: {
+                self.backGroundView.layoutIfNeeded()
+            })
         }
     }
     

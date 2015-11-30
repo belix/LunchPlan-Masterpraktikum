@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		051CBA681C0BF9BD00B0BA3B /* CustomLoggingFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051CBA671C0BF9BD00B0BA3B /* CustomLoggingFormatter.swift */; };
+		051CBA6A1C0C044100B0BA3B /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051CBA691C0C044100B0BA3B /* DataProvider.swift */; };
 		0534DECF1C0BA948003F04C3 /* AdminPanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0534DECE1C0BA948003F04C3 /* AdminPanelViewController.swift */; };
 		058877761C04849100FEE592 /* ShopTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058877751C04849100FEE592 /* ShopTableViewCell.swift */; };
 		058877781C048AE400FEE592 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058877771C048AE400FEE592 /* MenuViewController.swift */; };
@@ -47,6 +48,7 @@
 
 /* Begin PBXFileReference section */
 		051CBA671C0BF9BD00B0BA3B /* CustomLoggingFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomLoggingFormatter.swift; sourceTree = "<group>"; };
+		051CBA691C0C044100B0BA3B /* DataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataProvider.swift; path = DataModels/DataProvider.swift; sourceTree = "<group>"; };
 		0534DECE1C0BA948003F04C3 /* AdminPanelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AdminPanelViewController.swift; path = UI/AdminPanelViewController.swift; sourceTree = "<group>"; };
 		058877751C04849100FEE592 /* ShopTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShopTableViewCell.swift; path = UI/ShopTableViewCell.swift; sourceTree = "<group>"; };
 		058877771C048AE400FEE592 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuViewController.swift; path = UI/MenuViewController.swift; sourceTree = "<group>"; };
@@ -101,12 +103,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		051CBA661C0BF9A200B0BA3B /* Loggin */ = {
+		051CBA661C0BF9A200B0BA3B /* Logging */ = {
 			isa = PBXGroup;
 			children = (
 				051CBA671C0BF9BD00B0BA3B /* CustomLoggingFormatter.swift */,
 			);
-			name = Loggin;
+			name = Logging;
 			sourceTree = "<group>";
 		};
 		0534DECD1C0BA929003F04C3 /* AdminPanel */ = {
@@ -122,6 +124,7 @@
 			children = (
 				0588777C1C048C4D00FEE592 /* Shop.swift */,
 				0588777E1C048D4A00FEE592 /* MenuItem.swift */,
+				051CBA691C0C044100B0BA3B /* DataProvider.swift */,
 			);
 			name = "Data Models";
 			sourceTree = "<group>";
@@ -199,7 +202,7 @@
 		05FCED471C047C8B00482EA2 /* LunchPlan */ = {
 			isa = PBXGroup;
 			children = (
-				051CBA661C0BF9A200B0BA3B /* Loggin */,
+				051CBA661C0BF9A200B0BA3B /* Logging */,
 				058877841C04912D00FEE592 /* UI */,
 				0588777B1C048C3500FEE592 /* Data Models */,
 				05FCED481C047C8B00482EA2 /* AppDelegate.swift */,
@@ -439,6 +442,7 @@
 				0588777F1C048D4A00FEE592 /* MenuItem.swift in Sources */,
 				058877811C0490FC00FEE592 /* FavoritesViewController.swift in Sources */,
 				0534DECF1C0BA948003F04C3 /* AdminPanelViewController.swift in Sources */,
+				051CBA6A1C0C044100B0BA3B /* DataProvider.swift in Sources */,
 				051CBA681C0BF9BD00B0BA3B /* CustomLoggingFormatter.swift in Sources */,
 				0588777D1C048C4D00FEE592 /* Shop.swift in Sources */,
 				058877891C04A4A200FEE592 /* MenuCustomizationViewController.swift in Sources */,
