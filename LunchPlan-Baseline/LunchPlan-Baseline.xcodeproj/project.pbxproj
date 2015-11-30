@@ -25,6 +25,7 @@
 		051CBABE1C0C683E00B0BA3B /* Shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051CBABB1C0C683E00B0BA3B /* Shop.swift */; };
 		051CBABF1C0C683E00B0BA3B /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051CBABC1C0C683E00B0BA3B /* MenuItem.swift */; };
 		051CBAC21C0C684D00B0BA3B /* CustomLoggingFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051CBAC11C0C684D00B0BA3B /* CustomLoggingFormatter.swift */; };
+		051CBAC41C0C6F9900B0BA3B /* StatisticsOutlineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051CBAC31C0C6F9900B0BA3B /* StatisticsOutlineViewController.swift */; };
 		A185E7D1E6B3B8E680FDAD55 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFD14395903FB878649E045C /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +71,7 @@
 		051CBABB1C0C683E00B0BA3B /* Shop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Shop.swift; path = DataModels/Shop.swift; sourceTree = "<group>"; };
 		051CBABC1C0C683E00B0BA3B /* MenuItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuItem.swift; path = DataModels/MenuItem.swift; sourceTree = "<group>"; };
 		051CBAC11C0C684D00B0BA3B /* CustomLoggingFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomLoggingFormatter.swift; sourceTree = "<group>"; };
+		051CBAC31C0C6F9900B0BA3B /* StatisticsOutlineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StatisticsOutlineViewController.swift; path = UI/StatisticsOutlineViewController.swift; sourceTree = "<group>"; };
 		4F51BA3E79E7AD22F66697E8 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		A54DEACB9EDD66AEE2116676 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		FFD14395903FB878649E045C /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -159,14 +161,12 @@
 		051CBAA81C0C682000B0BA3B /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				051CBAA91C0C682E00B0BA3B /* StartscreenViewController.swift */,
-				051CBAAA1C0C682E00B0BA3B /* ShopTableViewCell.swift */,
-				051CBAAB1C0C682E00B0BA3B /* FavoritesViewController.swift */,
-				051CBAAC1C0C682E00B0BA3B /* MenuViewController.swift */,
-				051CBAAD1C0C682E00B0BA3B /* MenuCustomizationViewController.swift */,
-				051CBAAE1C0C682E00B0BA3B /* AdminPanelViewController.swift */,
-				051CBAAF1C0C682E00B0BA3B /* StatisticViewController.swift */,
-				051CBAB01C0C682E00B0BA3B /* MenuTableViewCell.swift */,
+				051CBACA1C0C70A700B0BA3B /* Menu Customization */,
+				051CBAC91C0C70A200B0BA3B /* Menu Selection */,
+				051CBAC81C0C709A00B0BA3B /* Favorites */,
+				051CBAC71C0C709300B0BA3B /* Shop Selection */,
+				051CBAC61C0C708D00B0BA3B /* AdminPanel */,
+				051CBAC51C0C708300B0BA3B /* Statistics */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -187,6 +187,57 @@
 				051CBAC11C0C684D00B0BA3B /* CustomLoggingFormatter.swift */,
 			);
 			name = Logging;
+			sourceTree = "<group>";
+		};
+		051CBAC51C0C708300B0BA3B /* Statistics */ = {
+			isa = PBXGroup;
+			children = (
+				051CBAC31C0C6F9900B0BA3B /* StatisticsOutlineViewController.swift */,
+				051CBAAF1C0C682E00B0BA3B /* StatisticViewController.swift */,
+			);
+			name = Statistics;
+			sourceTree = "<group>";
+		};
+		051CBAC61C0C708D00B0BA3B /* AdminPanel */ = {
+			isa = PBXGroup;
+			children = (
+				051CBAAE1C0C682E00B0BA3B /* AdminPanelViewController.swift */,
+			);
+			name = AdminPanel;
+			sourceTree = "<group>";
+		};
+		051CBAC71C0C709300B0BA3B /* Shop Selection */ = {
+			isa = PBXGroup;
+			children = (
+				051CBAA91C0C682E00B0BA3B /* StartscreenViewController.swift */,
+				051CBAAA1C0C682E00B0BA3B /* ShopTableViewCell.swift */,
+			);
+			name = "Shop Selection";
+			sourceTree = "<group>";
+		};
+		051CBAC81C0C709A00B0BA3B /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				051CBAAB1C0C682E00B0BA3B /* FavoritesViewController.swift */,
+			);
+			name = Favorites;
+			sourceTree = "<group>";
+		};
+		051CBAC91C0C70A200B0BA3B /* Menu Selection */ = {
+			isa = PBXGroup;
+			children = (
+				051CBAAC1C0C682E00B0BA3B /* MenuViewController.swift */,
+				051CBAB01C0C682E00B0BA3B /* MenuTableViewCell.swift */,
+			);
+			name = "Menu Selection";
+			sourceTree = "<group>";
+		};
+		051CBACA1C0C70A700B0BA3B /* Menu Customization */ = {
+			isa = PBXGroup;
+			children = (
+				051CBAAD1C0C682E00B0BA3B /* MenuCustomizationViewController.swift */,
+			);
+			name = "Menu Customization";
 			sourceTree = "<group>";
 		};
 		3C40C9FBFB5D7B5E01ED4FBB /* Pods */ = {
@@ -396,6 +447,7 @@
 				051CBA7B1C0C679100B0BA3B /* AppDelegate.swift in Sources */,
 				051CBAB31C0C682E00B0BA3B /* FavoritesViewController.swift in Sources */,
 				051CBAB81C0C682E00B0BA3B /* MenuTableViewCell.swift in Sources */,
+				051CBAC41C0C6F9900B0BA3B /* StatisticsOutlineViewController.swift in Sources */,
 				051CBAB11C0C682E00B0BA3B /* StartscreenViewController.swift in Sources */,
 				051CBABF1C0C683E00B0BA3B /* MenuItem.swift in Sources */,
 				051CBAC21C0C684D00B0BA3B /* CustomLoggingFormatter.swift in Sources */,

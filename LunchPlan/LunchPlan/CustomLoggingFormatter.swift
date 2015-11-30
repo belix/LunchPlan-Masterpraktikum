@@ -15,7 +15,7 @@ class CustomLoggingFormatter: NSObject, DDLogFormatter {
     
     override init() {
         super.init()
-        self.dateFormatter.dateFormat = "yyyy/MM/dd HH:mm:ss:SSS"
+        self.dateFormatter.dateFormat = "HH:mm:ss:SSS"
     }
     
     func formatLogMessage(logMessage: DDLogMessage!) -> String! {

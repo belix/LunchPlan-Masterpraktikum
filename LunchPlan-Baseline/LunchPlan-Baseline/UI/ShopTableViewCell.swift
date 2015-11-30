@@ -31,41 +31,6 @@ class ShopTableViewCell: UITableViewCell {
     @IBOutlet weak var backGroundWidthConstraint: NSLayoutConstraint!
     @IBOutlet weak var backGroundView: UIView!
     
-    var _time : Int = 0
-    var time :Int {
-        get {
-            return _time
-        }
-        set {
-            _time = newValue
-            if newValue > 10{
-                self.backGroundWidthConstraint.constant = 280
-                self.backGroundView?.backgroundColor = UIColor(netHex: 0xc0392b)
-            }
-            else if newValue > 8{
-                self.backGroundWidthConstraint.constant = 220
-                self.backGroundView?.backgroundColor = UIColor(netHex: 0xf39c12)
-            }
-            else if newValue > 6{
-                self.backGroundWidthConstraint.constant = 160
-                self.backGroundView?.backgroundColor = UIColor(netHex: 0x9b59b6)
-            }
-            else if newValue > 4{
-                self.backGroundWidthConstraint.constant = 100
-                self.backGroundView?.backgroundColor = UIColor(netHex: 0x3498db)
-            }
-            else{
-                self.backGroundWidthConstraint.constant = 40
-                self.backGroundView?.backgroundColor = UIColor(netHex: 0x2ecc71)
-            }
-            self.timeLabel.text = "\(newValue) m"
-            
-            UIView.animateWithDuration(Double(0.5), animations: {
-                self.backGroundView.layoutIfNeeded()
-            })
-        }
-    }
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

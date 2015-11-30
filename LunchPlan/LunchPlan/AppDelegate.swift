@@ -14,6 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     var enteredViaShortCut = false
+    var newTask = false
     var navigationController : UINavigationController?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
@@ -28,6 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         DDTTYLogger.sharedInstance().logFormatter = CustomLoggingFormatter()
         DDLog.addLogger(DDTTYLogger.sharedInstance())
+        DDLog.addLogger(CustomLogger.sharedInstance)
                 
         return true
     }

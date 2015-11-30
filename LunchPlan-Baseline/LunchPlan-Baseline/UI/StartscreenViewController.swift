@@ -64,19 +64,6 @@ class StartscreenViewController: UIViewController, UITableViewDelegate, UITableV
         return [more]
     }
     
-    //MARK: Shaking
-    override func canBecomeFirstResponder() -> Bool {
-        return true
-    }
-    
-    override func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent?) {
-        if motion == .MotionShake {
-            DDLogInfo("Shaked to Favorites")
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let vc = storyboard.instantiateViewControllerWithIdentifier("FavoritesNavigationController")
-            self.navigationController?.presentViewController(vc, animated: true, completion: nil)
-        }
-    }
     
     // MARK: - Navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

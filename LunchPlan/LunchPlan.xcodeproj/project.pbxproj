@@ -10,6 +10,7 @@
 		051CBA681C0BF9BD00B0BA3B /* CustomLoggingFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051CBA671C0BF9BD00B0BA3B /* CustomLoggingFormatter.swift */; };
 		051CBA6A1C0C044100B0BA3B /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051CBA691C0C044100B0BA3B /* DataProvider.swift */; };
 		051CBA6D1C0C113F00B0BA3B /* StatisticViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051CBA6C1C0C113F00B0BA3B /* StatisticViewController.swift */; };
+		051CBACE1C0C7F2800B0BA3B /* CustomLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051CBACD1C0C7F2800B0BA3B /* CustomLogger.swift */; };
 		0534DECF1C0BA948003F04C3 /* AdminPanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0534DECE1C0BA948003F04C3 /* AdminPanelViewController.swift */; };
 		058877761C04849100FEE592 /* ShopTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058877751C04849100FEE592 /* ShopTableViewCell.swift */; };
 		058877781C048AE400FEE592 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058877771C048AE400FEE592 /* MenuViewController.swift */; };
@@ -50,6 +51,7 @@
 		051CBA671C0BF9BD00B0BA3B /* CustomLoggingFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomLoggingFormatter.swift; sourceTree = "<group>"; };
 		051CBA691C0C044100B0BA3B /* DataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataProvider.swift; path = DataModels/DataProvider.swift; sourceTree = "<group>"; };
 		051CBA6C1C0C113F00B0BA3B /* StatisticViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StatisticViewController.swift; path = UI/StatisticViewController.swift; sourceTree = "<group>"; };
+		051CBACD1C0C7F2800B0BA3B /* CustomLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomLogger.swift; sourceTree = "<group>"; };
 		0534DECE1C0BA948003F04C3 /* AdminPanelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AdminPanelViewController.swift; path = UI/AdminPanelViewController.swift; sourceTree = "<group>"; };
 		058877751C04849100FEE592 /* ShopTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShopTableViewCell.swift; path = UI/ShopTableViewCell.swift; sourceTree = "<group>"; };
 		058877771C048AE400FEE592 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuViewController.swift; path = UI/MenuViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				051CBA671C0BF9BD00B0BA3B /* CustomLoggingFormatter.swift */,
+				051CBACD1C0C7F2800B0BA3B /* CustomLogger.swift */,
 			);
 			name = Logging;
 			sourceTree = "<group>";
@@ -447,6 +450,7 @@
 				05FCED771C047CDC00482EA2 /* StartscreenViewController.swift in Sources */,
 				05FCED491C047C8B00482EA2 /* AppDelegate.swift in Sources */,
 				05A8829A1C04AF45005106C0 /* CircleView.swift in Sources */,
+				051CBACE1C0C7F2800B0BA3B /* CustomLogger.swift in Sources */,
 				0588777F1C048D4A00FEE592 /* MenuItem.swift in Sources */,
 				058877811C0490FC00FEE592 /* FavoritesViewController.swift in Sources */,
 				0534DECF1C0BA948003F04C3 /* AdminPanelViewController.swift in Sources */,

@@ -29,13 +29,13 @@ extension UIAlertController {
     }
 }
 
-
 class StartscreenViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     let shops = DataProvider.shops()
     var selectedShop : Shop?
     var cells = [ShopTableViewCell]()
     
+    @IBOutlet weak var settingsBarButton: UIBarButtonItem!
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -51,15 +51,25 @@ class StartscreenViewController: UIViewController, UITableViewDelegate, UITableV
         if appDelegate.enteredViaShortCut{
             self.performSegueWithIdentifier("showMenuCustomizationViaShortcutSegue", sender: nil)
         }
+        if appDelegate.newTask{
+            appDelegate.newTask = false
+            let alertController = UIAlertController(title: "Neue Aufgabe", message: "Lasse dir die Aufgabe erklären und drücke OK falls du bereit bist", preferredStyle: UIAlertControllerStyle.Alert)
+            
+            let okAction = UIAlertAction(title: "OK", style: .Default) { (action:UIAlertAction!) in
+                DDLogInfo("--------- Start Logging ---------")
+            }
+            alertController.addAction(okAction)
+            self.presentViewController(alertController, animated: true, completion: nil)
+        }
     }
     
     override func didRotateFromInterfaceOrientation(fromInterfaceOrientation: UIInterfaceOrientation) {
         if fromInterfaceOrientation == .LandscapeLeft || fromInterfaceOrientation == .LandscapeRight{
-            DDLogInfo("Rotate from Heatmap to ListView")
+            DDLogDebug("Rotate from Heatmap to ListView")
             self.title = "Shop Auswahl"
         }
         else{
-            DDLogInfo("Rotate from ListView to Heatmap")
+            DDLogDebug("Rotate from ListView to Heatmap")
             self.title = "Heat Map"
         }
     }
@@ -120,7 +130,7 @@ class StartscreenViewController: UIViewController, UITableViewDelegate, UITableV
     
     override func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent?) {
         if motion == .MotionShake {
-            DDLogInfo("Shaked to Favorites")
+            DDLogVerbose("Shaked to Favorites")
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let vc = storyboard.instantiateViewControllerWithIdentifier("FavoritesNavigationController")
             self.navigationController?.presentViewController(vc, animated: true, completion: nil)

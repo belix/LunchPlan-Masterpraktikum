@@ -745,13 +745,15 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="rX7-LS-rY9">
-                        <barButtonItem key="leftBarButtonItem" title="Item" id="tCh-CN-e6V">
+                        <barButtonItem key="leftBarButtonItem" image="settings" id="tCh-CN-e6V">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <segue destination="zju-bu-Tkz" kind="presentation" id="gJh-mN-NPB"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="settingsBarButton" destination="tCh-CN-e6V" id="Bw1-Dt-90G"/>
                         <outlet property="tableView" destination="2HG-Nc-KUI" id="U98-9V-x3l"/>
                         <segue destination="MiG-wr-kY2" kind="show" identifier="showMenuSegue" id="Kry-ca-PXy"/>
                         <segue destination="wqm-Xf-GV6" kind="presentation" identifier="showMenuCustomizationViaShortcutSegue" animates="NO" id="7GF-iS-3BZ"/>
@@ -783,7 +785,7 @@
                                         <rect key="frame" x="0.0" y="92" width="375" height="120"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Brt-Ul-bUU" id="ss4-nf-6j2">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="119.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="207" height="119.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="doenerbox" translatesAutoresizingMaskIntoConstraints="NO" id="jRC-TN-plb">
@@ -855,10 +857,10 @@
                                                     <exclude reference="qc3-5H-jwo"/>
                                                 </mask>
                                                 <mask key="constraints">
-                                                    <exclude reference="1jb-Cn-bMd"/>
-                                                    <exclude reference="p8T-Pb-Qmv"/>
                                                     <exclude reference="7Fp-Ga-Ckn"/>
                                                     <exclude reference="ZCA-GY-zib"/>
+                                                    <exclude reference="1jb-Cn-bMd"/>
+                                                    <exclude reference="p8T-Pb-Qmv"/>
                                                 </mask>
                                             </variation>
                                             <variation key="heightClass=regular-widthClass=compact">
@@ -948,13 +950,15 @@
                                 <animations/>
                                 <color key="backgroundColor" red="1" green="0.35294117650000001" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="ba8-x8-ow6"/>
+                                    <constraint firstAttribute="height" constant="50" id="ba8-x8-ow6">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="30"/>
+                                    </constraint>
                                 </constraints>
                                 <state key="normal" title="Clear Logging Cache">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="orderButtonPressed:" destination="3sn-Ne-d0g" eventType="touchUpInside" id="jGA-fh-LxJ"/>
+                                    <action selector="clearLoggingCacheButtonPressed:" destination="QRj-VB-dNx" eventType="touchUpInside" id="fFI-ly-Vdq"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iT6-Xb-vRb">
@@ -962,20 +966,25 @@
                                 <animations/>
                                 <color key="backgroundColor" red="0.20000000000000001" green="0.59999999999999998" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="hPx-5x-fsa"/>
+                                    <constraint firstAttribute="height" constant="50" id="hPx-5x-fsa">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="30"/>
+                                    </constraint>
                                 </constraints>
-                                <state key="normal" title="Start Logging">
+                                <state key="normal" title="Send Logs via Email">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="orderButtonPressed:" destination="3sn-Ne-d0g" eventType="touchUpInside" id="enn-KL-5if"/>
+                                    <action selector="sendLogsViaEmailButtonPressed:" destination="QRj-VB-dNx" eventType="touchUpInside" id="hzf-mm-H6U"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AKf-vB-Aog">
                                 <rect key="frame" x="-25" y="-30" width="97" height="30"/>
                                 <animations/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="Jfl-iD-Msf"/>
+                                    <constraint firstAttribute="height" constant="50" id="Jfl-iD-Msf">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="30"/>
+                                    </constraint>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -998,7 +1007,9 @@
                                 <animations/>
                                 <color key="backgroundColor" red="0.20000000000000001" green="0.59999999999999998" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="kD2-uU-J0Z"/>
+                                    <constraint firstAttribute="height" constant="50" id="kD2-uU-J0Z">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="30"/>
+                                    </constraint>
                                 </constraints>
                                 <state key="normal" title="Fire Notification">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1008,21 +1019,71 @@
                                     <action selector="orderButtonPressed:" destination="3sn-Ne-d0g" eventType="touchUpInside" id="hnX-MN-Df4"/>
                                 </connections>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uld-kd-twc">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LoggingTableViewCell" id="ibw-Nk-8ls">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ibw-Nk-8ls" id="Fks-el-YKu">
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <animations/>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="QRj-VB-dNx" id="cUP-lv-aqj"/>
+                                    <outlet property="delegate" destination="QRj-VB-dNx" id="8gx-cE-ode"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tes-jw-OL1">
+                                <rect key="frame" x="35" y="577" width="305" height="50"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.20000000000000001" green="0.59999999999999998" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="7li-Op-0f8">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="30"/>
+                                    </constraint>
+                                </constraints>
+                                <state key="normal" title="Start Task">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="startTaskButtonPressed:" destination="QRj-VB-dNx" eventType="touchUpInside" id="vA9-er-ueB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="MFf-wA-8RQ" firstAttribute="top" secondItem="xvr-oz-hEz" secondAttribute="bottom" constant="59" id="1wS-JW-SKj"/>
-                            <constraint firstItem="xvr-oz-hEz" firstAttribute="top" secondItem="iT6-Xb-vRb" secondAttribute="bottom" constant="30" id="6Mc-An-T5B"/>
+                            <constraint firstItem="xvr-oz-hEz" firstAttribute="top" secondItem="iT6-Xb-vRb" secondAttribute="bottom" constant="30" id="6Mc-An-T5B">
+                                <variation key="heightClass=regular-widthClass=compact" constant="8"/>
+                            </constraint>
+                            <constraint firstItem="Tes-jw-OL1" firstAttribute="leading" secondItem="iT6-Xb-vRb" secondAttribute="leading" id="6bS-FI-UoO"/>
+                            <constraint firstItem="MFf-wA-8RQ" firstAttribute="top" secondItem="AKf-vB-Aog" secondAttribute="bottom" constant="8" id="8cD-qm-b5C"/>
                             <constraint firstItem="r2W-qY-FJF" firstAttribute="width" secondItem="AKf-vB-Aog" secondAttribute="width" id="D5s-pR-1wv"/>
                             <constraint firstItem="iT6-Xb-vRb" firstAttribute="top" secondItem="AKf-vB-Aog" secondAttribute="bottom" constant="30" id="FBN-hf-8sC"/>
+                            <constraint firstItem="iT6-Xb-vRb" firstAttribute="top" secondItem="uld-kd-twc" secondAttribute="bottom" constant="8" id="G3q-lm-OCq"/>
                             <constraint firstAttribute="trailing" secondItem="xvr-oz-hEz" secondAttribute="trailing" constant="36" id="LSV-ow-QBm"/>
                             <constraint firstItem="iT6-Xb-vRb" firstAttribute="trailing" secondItem="xvr-oz-hEz" secondAttribute="trailing" id="MJW-Iy-NDn"/>
+                            <constraint firstItem="uld-kd-twc" firstAttribute="top" secondItem="CmH-tC-Uus" secondAttribute="bottom" id="OGN-cn-n6N"/>
                             <constraint firstItem="r2W-qY-FJF" firstAttribute="bottom" secondItem="AKf-vB-Aog" secondAttribute="bottom" id="SnY-9B-0Mf"/>
+                            <constraint firstAttribute="trailing" secondItem="uld-kd-twc" secondAttribute="trailing" id="aZG-gD-iWa"/>
+                            <constraint firstItem="r2W-qY-FJF" firstAttribute="top" secondItem="Tes-jw-OL1" secondAttribute="bottom" constant="16" id="buz-Tr-jQ7"/>
+                            <constraint firstItem="r2W-qY-FJF" firstAttribute="top" secondItem="xvr-oz-hEz" secondAttribute="bottom" constant="8" id="cD0-xD-BnP"/>
                             <constraint firstItem="r2W-qY-FJF" firstAttribute="leading" secondItem="AKf-vB-Aog" secondAttribute="trailing" constant="20" id="g63-gF-HmR"/>
+                            <constraint firstItem="Tes-jw-OL1" firstAttribute="top" secondItem="xvr-oz-hEz" secondAttribute="bottom" constant="16" id="iVZ-OK-F16"/>
                             <constraint firstItem="iT6-Xb-vRb" firstAttribute="leading" secondItem="xvr-oz-hEz" secondAttribute="leading" id="jVS-Dl-oEV"/>
                             <constraint firstItem="xvr-oz-hEz" firstAttribute="leading" secondItem="QDb-UA-iaC" secondAttribute="leading" constant="36" id="mFe-GG-qrF"/>
+                            <constraint firstItem="MFf-wA-8RQ" firstAttribute="top" secondItem="r2W-qY-FJF" secondAttribute="bottom" constant="8" id="pvj-1A-d2e"/>
                             <constraint firstItem="AKf-vB-Aog" firstAttribute="leading" secondItem="iT6-Xb-vRb" secondAttribute="leading" id="pvx-ol-zNI"/>
+                            <constraint firstItem="Tes-jw-OL1" firstAttribute="trailing" secondItem="iT6-Xb-vRb" secondAttribute="trailing" id="r0q-R3-jgk"/>
+                            <constraint firstItem="uld-kd-twc" firstAttribute="leading" secondItem="QDb-UA-iaC" secondAttribute="leading" id="wdv-5Z-eDN"/>
                             <constraint firstItem="r2W-qY-FJF" firstAttribute="trailing" secondItem="iT6-Xb-vRb" secondAttribute="trailing" id="xrD-54-v9A"/>
                         </constraints>
                         <variation key="default">
@@ -1031,20 +1092,33 @@
                                 <exclude reference="iT6-Xb-vRb"/>
                                 <exclude reference="AKf-vB-Aog"/>
                                 <exclude reference="r2W-qY-FJF"/>
+                                <exclude reference="uld-kd-twc"/>
+                                <exclude reference="Tes-jw-OL1"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="1wS-JW-SKj"/>
-                                <exclude reference="pvx-ol-zNI"/>
+                                <exclude reference="OGN-cn-n6N"/>
+                                <exclude reference="aZG-gD-iWa"/>
+                                <exclude reference="wdv-5Z-eDN"/>
                                 <exclude reference="FBN-hf-8sC"/>
+                                <exclude reference="G3q-lm-OCq"/>
                                 <exclude reference="MJW-Iy-NDn"/>
                                 <exclude reference="jVS-Dl-oEV"/>
-                                <exclude reference="D5s-pR-1wv"/>
-                                <exclude reference="SnY-9B-0Mf"/>
-                                <exclude reference="g63-gF-HmR"/>
-                                <exclude reference="xrD-54-v9A"/>
                                 <exclude reference="6Mc-An-T5B"/>
                                 <exclude reference="LSV-ow-QBm"/>
                                 <exclude reference="mFe-GG-qrF"/>
+                                <exclude reference="6bS-FI-UoO"/>
+                                <exclude reference="iVZ-OK-F16"/>
+                                <exclude reference="r0q-R3-jgk"/>
+                                <exclude reference="pvx-ol-zNI"/>
+                                <exclude reference="D5s-pR-1wv"/>
+                                <exclude reference="SnY-9B-0Mf"/>
+                                <exclude reference="buz-Tr-jQ7"/>
+                                <exclude reference="cD0-xD-BnP"/>
+                                <exclude reference="g63-gF-HmR"/>
+                                <exclude reference="xrD-54-v9A"/>
+                                <exclude reference="1wS-JW-SKj"/>
+                                <exclude reference="8cD-qm-b5C"/>
+                                <exclude reference="pvj-1A-d2e"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -1053,20 +1127,33 @@
                                 <include reference="iT6-Xb-vRb"/>
                                 <include reference="AKf-vB-Aog"/>
                                 <include reference="r2W-qY-FJF"/>
+                                <include reference="uld-kd-twc"/>
+                                <include reference="Tes-jw-OL1"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="1wS-JW-SKj"/>
-                                <include reference="pvx-ol-zNI"/>
-                                <include reference="FBN-hf-8sC"/>
+                                <include reference="OGN-cn-n6N"/>
+                                <include reference="aZG-gD-iWa"/>
+                                <include reference="wdv-5Z-eDN"/>
+                                <exclude reference="FBN-hf-8sC"/>
+                                <include reference="G3q-lm-OCq"/>
                                 <include reference="MJW-Iy-NDn"/>
                                 <include reference="jVS-Dl-oEV"/>
-                                <include reference="D5s-pR-1wv"/>
-                                <include reference="SnY-9B-0Mf"/>
-                                <include reference="g63-gF-HmR"/>
-                                <include reference="xrD-54-v9A"/>
                                 <include reference="6Mc-An-T5B"/>
                                 <include reference="LSV-ow-QBm"/>
                                 <include reference="mFe-GG-qrF"/>
+                                <include reference="6bS-FI-UoO"/>
+                                <include reference="iVZ-OK-F16"/>
+                                <include reference="r0q-R3-jgk"/>
+                                <include reference="pvx-ol-zNI"/>
+                                <include reference="D5s-pR-1wv"/>
+                                <include reference="SnY-9B-0Mf"/>
+                                <include reference="buz-Tr-jQ7"/>
+                                <exclude reference="cD0-xD-BnP"/>
+                                <include reference="g63-gF-HmR"/>
+                                <include reference="xrD-54-v9A"/>
+                                <exclude reference="1wS-JW-SKj"/>
+                                <include reference="8cD-qm-b5C"/>
+                                <include reference="pvj-1A-d2e"/>
                             </mask>
                         </variation>
                     </view>
@@ -1078,12 +1165,13 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="loggingTableView" destination="uld-kd-twc" id="qH7-qO-5i8"/>
                         <outlet property="notificationTextField" destination="AKf-vB-Aog" id="cjI-GL-iIn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6gL-nP-gtu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1988.25" y="-88.125"/>
+            <point key="canvasLocation" x="2105.25" y="-170.625"/>
         </scene>
         <!--Menu View Controller-->
         <scene sceneID="CbG-4L-vqh">
@@ -1180,7 +1268,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4ta-yL-tAi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3009.75" y="280.125"/>
+            <point key="canvasLocation" x="2862.75" y="467.625"/>
         </scene>
         <!--Menu Customization View Controller-->
         <scene sceneID="Qhg-G5-3Kx">
@@ -1364,7 +1452,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S7R-Cu-QLk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3009.75" y="829.875"/>
+            <point key="canvasLocation" x="2862.75" y="1069.875"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hhM-m9-9CH">
@@ -1414,6 +1502,7 @@
                         <viewControllerLayoutGuide type="bottom" id="FWI-9n-tzC"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="BFR-k0-3I8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="statistics" translatesAutoresizingMaskIntoConstraints="NO" id="NZd-29-EJb">
@@ -1434,10 +1523,10 @@
                                 <exclude reference="NZd-29-EJb"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="sZW-bJ-CO4"/>
                                 <exclude reference="4O4-P7-Iim"/>
                                 <exclude reference="KvJ-s7-gGN"/>
                                 <exclude reference="kNJ-aP-2IE"/>
-                                <exclude reference="sZW-bJ-CO4"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -1445,10 +1534,10 @@
                                 <include reference="NZd-29-EJb"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="sZW-bJ-CO4"/>
                                 <include reference="4O4-P7-Iim"/>
                                 <include reference="KvJ-s7-gGN"/>
                                 <include reference="kNJ-aP-2IE"/>
-                                <include reference="sZW-bJ-CO4"/>
                             </mask>
                         </variation>
                     </view>
@@ -1494,7 +1583,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4wG-3V-aeP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1106.25" y="-2.625"/>
+            <point key="canvasLocation" x="1106.25" y="-157.125"/>
         </scene>
     </scenes>
     <resources>
@@ -1502,9 +1591,10 @@
         <image name="doenerbox" width="75" height="75"/>
         <image name="heart-icon" width="50" height="50"/>
         <image name="location" width="14" height="18"/>
+        <image name="settings" width="28" height="28"/>
         <image name="statistics" width="233" height="356"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Kzo-le-tIg"/>
+        <segue reference="SFe-gv-uz8"/>
     </inferredMetricsTieBreakers>
 </document>
