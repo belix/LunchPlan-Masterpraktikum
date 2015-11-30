@@ -43,6 +43,10 @@ class StartscreenViewController: UIViewController, UITableViewDelegate, UITableV
         }
     }
     
+    override func didRotateFromInterfaceOrientation(fromInterfaceOrientation: UIInterfaceOrientation) {
+        self.tableView.reloadData()
+    }
+    
     //MARK: TableViewDataSource
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         
@@ -77,11 +81,25 @@ class StartscreenViewController: UIViewController, UITableViewDelegate, UITableV
     
     func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
         let more = UITableViewRowAction(style: .Normal, title: "Statistiken") { action, index in
-            print("more button tapped")
+            self.performSegueWithIdentifier("showStatisticsSegue", sender: nil)
         }
         more.backgroundColor = UIColor.lightGrayColor()
         
         return [more]
+    }
+    
+    //MARK: Shaking
+    override func canBecomeFirstResponder() -> Bool {
+        return true
+    }
+    
+    override func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent?) {
+        if motion == .MotionShake {
+            print("shake")
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateViewControllerWithIdentifier("FavoritesNavigationController")
+            self.navigationController?.presentViewController(vc, animated: true, completion: nil)
+        }
     }
     
     // MARK: - Navigation

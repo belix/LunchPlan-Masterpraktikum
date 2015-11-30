@@ -10,7 +10,7 @@ import UIKit
 
 private let reuseIdentifier = "MenuTableViewCell"
 
-class MenuViewController: UIViewController {
+class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     var shop : Shop?
     @IBOutlet weak var tableView: UITableView!

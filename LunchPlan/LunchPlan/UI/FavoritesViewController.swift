@@ -8,19 +8,44 @@
 
 import UIKit
 
-class FavoritesViewController: UIViewController {
+private let reuseIdentifier = "FavoritesTableViewCell"
 
+class FavoritesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+
+    let favorites = [MenuItem(menuName: "Currywurst", menuPrice: "1,99 €", menuImageString: "clock"),MenuItem(menuName: "Dönerbox", menuPrice: "2,99 €", menuImageString: "clock"),MenuItem(menuName: "Pommes", menuPrice: "0,99 €", menuImageString: "clock")]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        self.title = "Favoriten"
     }
     
+    @IBAction func closeButtonPressed(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    //MARK: TableViewDataSource
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return favorites.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier(reuseIdentifier, forIndexPath: indexPath) as! FavoritesTableViewCell
+        
+        let menuItem = favorites[indexPath.row]
+        // Configure the cell...
+        cell.menuItemLabel.text = menuItem.menuName
+        
+        return cell
+    }
+    
+    //MARK: TableViewDelegate
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    }
 
     /*
     // MARK: - Navigation

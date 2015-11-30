@@ -35,6 +35,12 @@ class MenuCustomizationViewController: UIViewController {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
 
+    @IBAction func orderButtonPressed(sender: AnyObject) {
+        let alertController = UIAlertController(title: "Bestellung erfolgreich", message:
+            "Du kannst deine Dönerbox um 12:45 Uhr abholen.", preferredStyle: UIAlertControllerStyle.Alert)
+        alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default,handler: nil))
+        self.presentViewController(alertController, animated: true, completion: nil)
+    }
     /*
     // MARK: - Navigation
 

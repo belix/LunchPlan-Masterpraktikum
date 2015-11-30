@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0534DECF1C0BA948003F04C3 /* AdminPanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0534DECE1C0BA948003F04C3 /* AdminPanelViewController.swift */; };
 		058877761C04849100FEE592 /* ShopTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058877751C04849100FEE592 /* ShopTableViewCell.swift */; };
 		058877781C048AE400FEE592 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058877771C048AE400FEE592 /* MenuViewController.swift */; };
 		0588777A1C048B4500FEE592 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058877791C048B4500FEE592 /* MenuTableViewCell.swift */; };
@@ -15,6 +16,7 @@
 		058877811C0490FC00FEE592 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058877801C0490FC00FEE592 /* FavoritesViewController.swift */; };
 		058877831C04912800FEE592 /* FavoritesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058877821C04912800FEE592 /* FavoritesTableViewCell.swift */; };
 		058877891C04A4A200FEE592 /* MenuCustomizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058877881C04A4A200FEE592 /* MenuCustomizationViewController.swift */; };
+		05A8829A1C04AF45005106C0 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A882991C04AF45005106C0 /* CircleView.swift */; };
 		05FCED491C047C8B00482EA2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FCED481C047C8B00482EA2 /* AppDelegate.swift */; };
 		05FCED4E1C047C8B00482EA2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05FCED4C1C047C8B00482EA2 /* Main.storyboard */; };
 		05FCED501C047C8B00482EA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05FCED4F1C047C8B00482EA2 /* Assets.xcassets */; };
@@ -42,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0534DECE1C0BA948003F04C3 /* AdminPanelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AdminPanelViewController.swift; path = UI/AdminPanelViewController.swift; sourceTree = "<group>"; };
 		058877751C04849100FEE592 /* ShopTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShopTableViewCell.swift; path = UI/ShopTableViewCell.swift; sourceTree = "<group>"; };
 		058877771C048AE400FEE592 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuViewController.swift; path = UI/MenuViewController.swift; sourceTree = "<group>"; };
 		058877791C048B4500FEE592 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuTableViewCell.swift; path = UI/MenuTableViewCell.swift; sourceTree = "<group>"; };
@@ -50,6 +53,7 @@
 		058877801C0490FC00FEE592 /* FavoritesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FavoritesViewController.swift; path = UI/FavoritesViewController.swift; sourceTree = "<group>"; };
 		058877821C04912800FEE592 /* FavoritesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FavoritesTableViewCell.swift; path = UI/FavoritesTableViewCell.swift; sourceTree = "<group>"; };
 		058877881C04A4A200FEE592 /* MenuCustomizationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuCustomizationViewController.swift; path = UI/MenuCustomizationViewController.swift; sourceTree = "<group>"; };
+		05A882991C04AF45005106C0 /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		05FCED451C047C8B00482EA2 /* LunchPlan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LunchPlan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05FCED481C047C8B00482EA2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05FCED4D1C047C8B00482EA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -90,6 +94,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0534DECD1C0BA929003F04C3 /* AdminPanel */ = {
+			isa = PBXGroup;
+			children = (
+				0534DECE1C0BA948003F04C3 /* AdminPanelViewController.swift */,
+			);
+			name = AdminPanel;
+			sourceTree = "<group>";
+		};
 		0588777B1C048C3500FEE592 /* Data Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +114,8 @@
 		058877841C04912D00FEE592 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				05A882991C04AF45005106C0 /* CircleView.swift */,
+				0534DECD1C0BA929003F04C3 /* AdminPanel */,
 				058877871C04915A00FEE592 /* Favorites */,
 				058877861C04914B00FEE592 /* Menu Selection */,
 				058877851C04913B00FEE592 /* Shop Selection */,
@@ -335,8 +349,10 @@
 				0588777A1C048B4500FEE592 /* MenuTableViewCell.swift in Sources */,
 				05FCED771C047CDC00482EA2 /* StartscreenViewController.swift in Sources */,
 				05FCED491C047C8B00482EA2 /* AppDelegate.swift in Sources */,
+				05A8829A1C04AF45005106C0 /* CircleView.swift in Sources */,
 				0588777F1C048D4A00FEE592 /* MenuItem.swift in Sources */,
 				058877811C0490FC00FEE592 /* FavoritesViewController.swift in Sources */,
+				0534DECF1C0BA948003F04C3 /* AdminPanelViewController.swift in Sources */,
 				0588777D1C048C4D00FEE592 /* Shop.swift in Sources */,
 				058877891C04A4A200FEE592 /* MenuCustomizationViewController.swift in Sources */,
 			);
