@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CocoaLumberjack
 
 private let reuseIdentifier = "ShopTableViewCell"
 
@@ -76,6 +77,7 @@ class StartscreenViewController: UIViewController, UITableViewDelegate, UITableV
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         self.selectedShop = shops[indexPath.row]
         self.performSegueWithIdentifier("showMenuSegue", sender: nil)
+        DDLogDebug("Shop selected")
     }
 
     
