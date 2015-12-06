@@ -29,6 +29,7 @@ class AdminPanelViewController: UIViewController, UITextFieldDelegate,MFMailComp
     let dateFormatter = NSDateFormatter()
     var startTime: NSDate?
 
+    //MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         if self.messages.count != 0{
@@ -59,7 +60,7 @@ class AdminPanelViewController: UIViewController, UITextFieldDelegate,MFMailComp
         UIApplication.sharedApplication().scheduleLocalNotification(notification)
     }
     
-    //MARK: IBActions
+    //MARK: User Interaction
     @IBAction func closeButtonPressed(sender: AnyObject) {
         self.dismissViewControllerAnimated(true, completion: nil)
     }

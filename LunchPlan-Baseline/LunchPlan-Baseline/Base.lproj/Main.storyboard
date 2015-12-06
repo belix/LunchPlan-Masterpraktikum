@@ -1239,20 +1239,20 @@
                                 <exclude reference="3p9-5Q-9GO"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="WJB-ff-fhe"/>
+                                <exclude reference="d0k-XD-w1v"/>
                                 <exclude reference="2rc-tF-Y5w"/>
                                 <exclude reference="h6Q-ag-QBE"/>
                                 <exclude reference="uo7-br-beV"/>
+                                <exclude reference="USg-FN-OlT"/>
+                                <exclude reference="ele-ZN-I5O"/>
+                                <exclude reference="i3a-hK-NIH"/>
                                 <exclude reference="6er-CU-SGt"/>
                                 <exclude reference="9p9-7m-X3L"/>
                                 <exclude reference="Xvq-HK-XcV"/>
                                 <exclude reference="EU6-aj-XDQ"/>
                                 <exclude reference="RLn-NP-dwv"/>
                                 <exclude reference="nYP-cC-Dix"/>
-                                <exclude reference="USg-FN-OlT"/>
-                                <exclude reference="ele-ZN-I5O"/>
-                                <exclude reference="i3a-hK-NIH"/>
-                                <exclude reference="WJB-ff-fhe"/>
-                                <exclude reference="d0k-XD-w1v"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -1263,20 +1263,20 @@
                                 <include reference="3p9-5Q-9GO"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="WJB-ff-fhe"/>
+                                <include reference="d0k-XD-w1v"/>
                                 <include reference="2rc-tF-Y5w"/>
                                 <include reference="h6Q-ag-QBE"/>
                                 <include reference="uo7-br-beV"/>
+                                <include reference="USg-FN-OlT"/>
+                                <include reference="ele-ZN-I5O"/>
+                                <include reference="i3a-hK-NIH"/>
                                 <include reference="6er-CU-SGt"/>
                                 <include reference="9p9-7m-X3L"/>
                                 <include reference="Xvq-HK-XcV"/>
                                 <include reference="EU6-aj-XDQ"/>
                                 <include reference="RLn-NP-dwv"/>
                                 <include reference="nYP-cC-Dix"/>
-                                <include reference="USg-FN-OlT"/>
-                                <include reference="ele-ZN-I5O"/>
-                                <include reference="i3a-hK-NIH"/>
-                                <exclude reference="WJB-ff-fhe"/>
-                                <include reference="d0k-XD-w1v"/>
                             </mask>
                         </variation>
                     </view>

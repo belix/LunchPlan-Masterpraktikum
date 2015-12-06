@@ -111,6 +111,9 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
+                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                        <rect key="frame" x="171.5" y="85.5" width="35.5" height="17"/>
+                                                    </variation>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clock" translatesAutoresizingMaskIntoConstraints="NO" id="EYH-Ch-xJm">
                                                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
@@ -125,7 +128,8 @@
                                                             <exclude reference="Ohl-cl-I4T"/>
                                                         </mask>
                                                     </variation>
-                                                    <variation key="heightClass=regular-widthClass=compact">
+                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                        <rect key="frame" x="145.5" y="85" width="18" height="18"/>
                                                         <mask key="constraints">
                                                             <include reference="FWK-7q-zzf"/>
                                                             <include reference="Ohl-cl-I4T"/>
@@ -809,6 +813,9 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
+                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                        <rect key="frame" x="90" y="63" width="42" height="20.5"/>
+                                                    </variation>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart-icon" translatesAutoresizingMaskIntoConstraints="NO" id="qc3-5H-jwo">
                                                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
@@ -1096,29 +1103,29 @@
                                 <exclude reference="Tes-jw-OL1"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="1wS-JW-SKj"/>
+                                <exclude reference="8cD-qm-b5C"/>
+                                <exclude reference="pvj-1A-d2e"/>
+                                <exclude reference="pvx-ol-zNI"/>
                                 <exclude reference="OGN-cn-n6N"/>
                                 <exclude reference="aZG-gD-iWa"/>
                                 <exclude reference="wdv-5Z-eDN"/>
+                                <exclude reference="6bS-FI-UoO"/>
+                                <exclude reference="iVZ-OK-F16"/>
+                                <exclude reference="r0q-R3-jgk"/>
                                 <exclude reference="FBN-hf-8sC"/>
                                 <exclude reference="G3q-lm-OCq"/>
                                 <exclude reference="MJW-Iy-NDn"/>
                                 <exclude reference="jVS-Dl-oEV"/>
-                                <exclude reference="6Mc-An-T5B"/>
-                                <exclude reference="LSV-ow-QBm"/>
-                                <exclude reference="mFe-GG-qrF"/>
-                                <exclude reference="6bS-FI-UoO"/>
-                                <exclude reference="iVZ-OK-F16"/>
-                                <exclude reference="r0q-R3-jgk"/>
-                                <exclude reference="pvx-ol-zNI"/>
                                 <exclude reference="D5s-pR-1wv"/>
                                 <exclude reference="SnY-9B-0Mf"/>
                                 <exclude reference="buz-Tr-jQ7"/>
                                 <exclude reference="cD0-xD-BnP"/>
                                 <exclude reference="g63-gF-HmR"/>
                                 <exclude reference="xrD-54-v9A"/>
-                                <exclude reference="1wS-JW-SKj"/>
-                                <exclude reference="8cD-qm-b5C"/>
-                                <exclude reference="pvj-1A-d2e"/>
+                                <exclude reference="6Mc-An-T5B"/>
+                                <exclude reference="LSV-ow-QBm"/>
+                                <exclude reference="mFe-GG-qrF"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -1131,29 +1138,29 @@
                                 <include reference="Tes-jw-OL1"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="1wS-JW-SKj"/>
+                                <include reference="8cD-qm-b5C"/>
+                                <include reference="pvj-1A-d2e"/>
+                                <include reference="pvx-ol-zNI"/>
                                 <include reference="OGN-cn-n6N"/>
                                 <include reference="aZG-gD-iWa"/>
                                 <include reference="wdv-5Z-eDN"/>
+                                <include reference="6bS-FI-UoO"/>
+                                <include reference="iVZ-OK-F16"/>
+                                <include reference="r0q-R3-jgk"/>
                                 <exclude reference="FBN-hf-8sC"/>
                                 <include reference="G3q-lm-OCq"/>
                                 <include reference="MJW-Iy-NDn"/>
                                 <include reference="jVS-Dl-oEV"/>
-                                <include reference="6Mc-An-T5B"/>
-                                <include reference="LSV-ow-QBm"/>
-                                <include reference="mFe-GG-qrF"/>
-                                <include reference="6bS-FI-UoO"/>
-                                <include reference="iVZ-OK-F16"/>
-                                <include reference="r0q-R3-jgk"/>
-                                <include reference="pvx-ol-zNI"/>
                                 <include reference="D5s-pR-1wv"/>
                                 <include reference="SnY-9B-0Mf"/>
                                 <include reference="buz-Tr-jQ7"/>
                                 <exclude reference="cD0-xD-BnP"/>
                                 <include reference="g63-gF-HmR"/>
                                 <include reference="xrD-54-v9A"/>
-                                <exclude reference="1wS-JW-SKj"/>
-                                <include reference="8cD-qm-b5C"/>
-                                <include reference="pvj-1A-d2e"/>
+                                <include reference="6Mc-An-T5B"/>
+                                <include reference="LSV-ow-QBm"/>
+                                <include reference="mFe-GG-qrF"/>
                             </mask>
                         </variation>
                     </view>
@@ -1218,6 +1225,9 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
+                                                    <variation key="heightClass=compact" misplaced="YES">
+                                                        <rect key="frame" x="90" y="63" width="42" height="20.5"/>
+                                                    </variation>
                                                 </label>
                                             </subviews>
                                             <animations/>
